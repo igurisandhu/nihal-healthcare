@@ -300,7 +300,7 @@ export const footer = () => {
               </p>
 
               <a
-                href="tel:+911795271236"
+                href="tel:+919218511425"
                 class="
                   block
                   hover:text-cyan-400
@@ -309,7 +309,7 @@ export const footer = () => {
                 "
               >
 
-                +91 1795271236
+                +91 9218511425
 
               </a>
 
