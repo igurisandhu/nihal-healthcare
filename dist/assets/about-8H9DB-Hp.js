@@ -1,0 +1,1 @@
+var e=`/assets/about-kNUGpdeN.jpg`;export{e as t};

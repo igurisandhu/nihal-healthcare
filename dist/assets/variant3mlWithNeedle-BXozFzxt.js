@@ -1,0 +1,1 @@
+import"./footer-BJBn-YHe.js";import{t as e}from"./variantDetailPage-CKFvm860.js";e(`3ml-syringe-with-needle`);
