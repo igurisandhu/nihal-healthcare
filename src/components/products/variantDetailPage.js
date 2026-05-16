@@ -4,7 +4,7 @@
  */
 import { getWhatsAppQuoteUrl } from '../../utils/seoMeta.js';
 
-const WHATSAPP_NUMBER = '919855511552';
+const WHATSAPP_NUMBER = '919218511425';
 
 // Product variant placeholder images
 const variantImages = {

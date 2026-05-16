@@ -94,7 +94,7 @@ export function CategoryPage(categoryData) {
                 Details
               </a>
               <a 
-                href="https://wa.me/919855511552?text=${encodeURIComponent(`Hi Nihal Healthcare, I am interested in ${variant.name}. Please send me a quote.`)}"
+                href="https://wa.me/919218511425?text=${encodeURIComponent(`Hi Nihal Healthcare, I am interested in ${variant.name}. Please send me a quote.`)}"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2.5 px-3 rounded-lg text-sm font-semibold transition text-center"
@@ -157,7 +157,7 @@ export function CategoryPage(categoryData) {
             Contact our specialist team for bulk orders, custom specifications, or technical support.
           </p>
           <a 
-            href="https://wa.me/919855511552?text=Hi%20Nihal%20Healthcare,%20I%20am%20interested%20in%20${encodeURIComponent(categoryData.name)}.%20Could%20you%20please%20provide%20more%20information%20and%20pricing?"
+            href="https://wa.me/919218511425?text=Hi%20Nihal%20Healthcare,%20I%20am%20interested%20in%20${encodeURIComponent(categoryData.name)}.%20Could%20you%20please%20provide%20more%20information%20and%20pricing?"
             class="inline-block bg-white text-blue-600 font-bold px-8 py-3 rounded-full hover:bg-slate-100 transition"
             target="_blank"
             rel="noopener noreferrer"
