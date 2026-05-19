@@ -1,0 +1,1 @@
+import"./footer-CFOVKqMt.js";import{t as e}from"./variantDetailPage-CIzw_OJZ.js";e(`20ml-syringe-without-needle`);

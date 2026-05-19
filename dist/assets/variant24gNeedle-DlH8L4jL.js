@@ -1,1 +1,0 @@
-import"./footer-BJBn-YHe.js";import{t as e}from"./variantDetailPage-CKFvm860.js";e(`24g-hypodermic-needle`);

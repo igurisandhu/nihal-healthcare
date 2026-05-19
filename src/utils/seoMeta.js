@@ -129,14 +129,14 @@ export const generateMetaTags = (data, isVariant = false) => {
     title = `${data.name} | Medical Syringes & Needles | Nihal Healthcare`;
     description = `${data.briefDescription}. Available with ${data.needleGauges?.length || data.gauge ? 'multiple options' : 'various sizes'}. ISO 13485 certified. ETO sterilized. Contact for quote.`;
     keywords = `${data.name}, ${data.categoryName}, ${data.size || data.gauge}, sterile syringe, hypodermic needle, medical device, ISO 13485, ${data.emdnCode}`;
-    ogImage = data.image || 'https://nihalhealthcare.com/assets/placeholder-product.jpg';
+    ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare.jpg';
     url = `${baseUrl}/products/${data.categoryId}/${data.slug}.html`;
   } else {
     // Category page
     title = `${data.name} | Nihal Healthcare - Medical Supplies`;
     description = data.description;
     keywords = `${data.name}, sterile syringes, hypodermic needles, medical devices, ISO 13485, ETO sterilized, bulk ordering`;
-    ogImage = data.image || 'https://nihalhealthcare.com/assets/placeholder-category.jpg';
+    ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare.jpg';
     url = `${baseUrl}/products/${data.slug}.html`;
   }
 
@@ -155,6 +155,33 @@ export const generateMetaTags = (data, isVariant = false) => {
     canonical: url,
     robots: 'index, follow',
   };
+};
+
+/**
+ * Inject favicon link tags into document head
+ */
+export const injectFavicons = () => {
+  const favicons = [
+    { rel: 'icon', type: 'image/x-icon', href: '/assets/favicons/favicon.ico' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicons/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicons/favicon-16x16.png' },
+    { rel: 'apple-touch-icon', href: '/assets/favicons/apple-touch-icon.png' },
+    { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/assets/favicons/android-chrome-192x192.png' },
+    { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/assets/favicons/android-chrome-512x512.png' },
+  ];
+
+  // Remove existing favicon links to avoid duplicates
+  document.querySelectorAll('link[data-favicon="true"]').forEach((el) => el.remove());
+
+  favicons.forEach(({ rel, type, sizes, href }) => {
+    const link = document.createElement('link');
+    link.rel = rel;
+    if (type) link.type = type;
+    if (sizes) link.sizes = sizes;
+    link.href = href;
+    link.setAttribute('data-favicon', 'true');
+    document.head.appendChild(link);
+  });
 };
 
 /**
@@ -205,6 +232,9 @@ export const injectMetaTags = (tags) => {
     document.head.appendChild(canonical);
   }
   canonical.href = tags.canonical;
+
+  // Inject favicons
+  injectFavicons();
 };
 
 /**
@@ -555,14 +585,14 @@ export const generatePageMetaTags = (pageData) => {
     keywords: pageData.keywords,
     ogTitle: pageData.ogTitle || pageData.title,
     ogDescription: pageData.ogDescription || pageData.description,
-    ogImage: pageData.ogImage || `${baseUrl}/assets/og-image.jpg`,
+    ogImage: pageData.ogImage || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare.jpg`,
     ogUrl: pageData.url || baseUrl,
     ogType: ogType,
     ogLocale: ogLocale,
     twitterCard: pageData.twitterCard || 'summary_large_image',
     twitterTitle: pageData.twitterTitle || pageData.title,
     twitterDescription: pageData.twitterDescription || pageData.description,
-    twitterImage: pageData.twitterImage || pageData.ogImage || `${baseUrl}/assets/twitter-image.jpg`,
+    twitterImage: pageData.twitterImage || pageData.ogImage || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare.jpg`,
     canonical: pageData.canonical || pageData.url || baseUrl,
     robots: pageData.robots || 'index, follow',
     author: pageData.author,
@@ -625,6 +655,9 @@ export const injectEnhancedMetaTags = (tags) => {
     document.head.appendChild(canonical);
   }
   canonical.href = tags.canonical;
+
+  // Inject favicons
+  injectFavicons();
 };
 
 /**
