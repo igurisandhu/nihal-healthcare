@@ -1,1 +1,0 @@
-import"./footer-CFOVKqMt.js";import{t as e}from"./variantDetailPage-CIzw_OJZ.js";e(`22g-hypodermic-needle`);
