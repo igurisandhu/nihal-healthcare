@@ -7,9 +7,9 @@ import { productsHero } from './productsHero.js'
 
 // Product category placeholder images
 const categoryImages = {
-  'sterile-hypodermic-syringes': 'https://picsum.photos/600/400?random=1',
-  'sterile-hypodermic-syringes-without-needle': 'https://picsum.photos/600/400?random=2',
-  'sterile-hypodermic-needles': 'https://picsum.photos/600/400?random=3',
+  'sterile-hypodermic-syringes': '/assets/images/products/sterile-hypodermic-syringes-with-needle.png',
+  'sterile-hypodermic-syringes-without-needle': '/assets/images/products/sterile-hypodermic-syringes-without-needle.png',
+  'sterile-hypodermic-needles': '/assets/images/products/sterile-hypodermic-needles.png',
 }
 
 export const products = () => {

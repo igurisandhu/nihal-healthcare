@@ -8,33 +8,33 @@ import { WhatsAppQuoteButton } from './whatsappQuoteButton.js';
 // Product variant placeholder images
 const variantImages = {
   'sterile-hypodermic-syringes': {
-    '1ml-syringe-with-needle': 'https://picsum.photos/400/300?random=11',
-    '2ml-syringe-with-needle': 'https://picsum.photos/400/300?random=12',
-    '3ml-syringe-with-needle': 'https://picsum.photos/400/300?random=13',
-    '5ml-syringe-with-needle': 'https://picsum.photos/400/300?random=14',
-    '10ml-syringe-with-needle': 'https://picsum.photos/400/300?random=15',
-    '20ml-syringe-with-needle': 'https://picsum.photos/400/300?random=16',
-    '50ml-syringe-with-needle': 'https://picsum.photos/400/300?random=17',
+    '1ml-syringe-with-needle': '/assets/images/products/1ml-sterile-hypodermic-syringe-with-needle.png',
+    '2ml-syringe-with-needle': '/assets/images/products/2ml-sterile-hypodermic-syringe-with-needle.png',
+    '3ml-syringe-with-needle': '/assets/images/products/3ml-sterile-hypodermic-syringe-with-needle.png',
+    '5ml-syringe-with-needle': '/assets/images/products/5ml-sterile-hypodermic-syringe-with-needle.png',
+    '10ml-syringe-with-needle': '/assets/images/products/10ml-sterile-hypodermic-syringe-with-needle.png',
+    '20ml-syringe-with-needle': '/assets/images/products/20ml-sterile-hypodermic-syringe-with-needle.png',
+    '50ml-syringe-with-needle': '/assets/images/products/50ml-sterile-hypodermic-syringe-with-needle.png',
   },
   'sterile-hypodermic-syringes-without-needle': {
-    '1ml-syringe-without-needle': 'https://picsum.photos/400/300?random=21',
-    '2ml-syringe-without-needle': 'https://picsum.photos/400/300?random=22',
-    '3ml-syringe-without-needle': 'https://picsum.photos/400/300?random=23',
-    '5ml-syringe-without-needle': 'https://picsum.photos/400/300?random=24',
-    '10ml-syringe-without-needle': 'https://picsum.photos/400/300?random=25',
-    '20ml-syringe-without-needle': 'https://picsum.photos/400/300?random=26',
-    '50ml-syringe-without-needle': 'https://picsum.photos/400/300?random=27',
+    '1ml-syringe-without-needle': '/assets/images/products/1ml-sterile-hypodermic-syringe-without-needle-(Tuberculin).png',
+    '2ml-syringe-without-needle': '/assets/images/products/2ml-sterile-hypodermic-syringe-without-needle.png',
+    '3ml-syringe-without-needle': '/assets/images/products/3ml-sterile-hypodermic-syringe-without-needle.png',
+    '5ml-syringe-without-needle': '/assets/images/products/5ml-sterile-hypodermic-syringe-without-needle.png',
+    '10ml-syringe-without-needle': '/assets/images/products/10ml-sterile-hypodermic-syringe-without-needle.png',
+    '20ml-syringe-without-needle': '/assets/images/products/20ml-sterile-hypodermic-syringe-without-needle.png',
+    '50ml-syringe-without-needle': '/assets/images/products/50ml-sterile-hypodermic-syringe-without-needle.png',
   },
   'sterile-hypodermic-needles': {
-    '16g-hypodermic-needle': 'https://picsum.photos/400/300?random=31',
-    '18g-hypodermic-needle': 'https://picsum.photos/400/300?random=32',
-    '20g-hypodermic-needle': 'https://picsum.photos/400/300?random=33',
-    '21g-hypodermic-needle': 'https://picsum.photos/400/300?random=34',
-    '22g-hypodermic-needle': 'https://picsum.photos/400/300?random=35',
-    '23g-hypodermic-needle': 'https://picsum.photos/400/300?random=36',
-    '24g-hypodermic-needle': 'https://picsum.photos/400/300?random=37',
-    '25g-hypodermic-needle': 'https://picsum.photos/400/300?random=38',
-    '26g-hypodermic-needle': 'https://picsum.photos/400/300?random=39',
+    '16g-hypodermic-needle': '/assets/images/products/16g-steriles-hypodermic-needle.png',
+    '18g-hypodermic-needle': '/assets/images/products/18g-steriles-hypodermic-needle.png',
+    '20g-hypodermic-needle': '/assets/images/products/20g-steriles-hypodermic-needle.png',
+    '21g-hypodermic-needle': '/assets/images/products/21g-steriles-hypodermic-needle.png',
+    '22g-hypodermic-needle': '/assets/images/products/22g-steriles-hypodermic-needle.png',
+    '23g-hypodermic-needle': '/assets/images/products/23g-steriles-hypodermic-needle.png',
+    '24g-hypodermic-needle': '/assets/images/products/24g-steriles-hypodermic-needle.png',
+    '25g-hypodermic-needle': '/assets/images/products/25g-steriles-hypodermic-needle.png',
+    '26g-hypodermic-needle': '/assets/images/products/26g-steriles-hypodermic-needle.png',
   },
 };
 
@@ -59,7 +59,8 @@ export function CategoryPage(categoryData) {
                       'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=400&h=300&fit=crop';
 
       return `
-        <div class="variant-card group bg-white rounded-[24px] overflow-hidden border border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
+        <div onclick="window.location.href='/products/${variant.categoryId}/${variant.slug}.html'" class="variant-card group bg-white rounded-[24px] overflow-hidden border border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
+        
           <div class="relative h-56 bg-slate-100 overflow-hidden">
             <img 
               src="${imageUrl}"
@@ -73,9 +74,11 @@ export function CategoryPage(categoryData) {
           </div>
 
           <div class="p-6">
+
             <h3 class="text-lg font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-cyan-600 transition-colors">
               ${variant.name}
             </h3>
+
             <p class="text-sm text-slate-600 mb-4 line-clamp-2">
               ${variant.briefDescription}
             </p>
@@ -93,16 +96,20 @@ export function CategoryPage(categoryData) {
               >
                 Details
               </a>
+
               <a 
                 href="https://wa.me/919218511425?text=${encodeURIComponent(`Hi Nihal Healthcare, I am interested in ${variant.name}. Please send me a quote.`)}"
                 target="_blank"
                 rel="noopener noreferrer"
+                onclick="event.stopPropagation()"
                 class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2.5 px-3 rounded-lg text-sm font-semibold transition text-center"
               >
                 Quote
               </a>
             </div>
+
           </div>
+
         </div>
       `;
     })
