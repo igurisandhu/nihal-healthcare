@@ -7,13 +7,24 @@ import './style.css'
 import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
 
+
 // SEO Metadata Injection
-import { injectEnhancedMetaTags } from './utils/seoMeta'
+import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
+import { injectGTM } from './utils/gtm.js';
+
+injectGTM();
 
 // Inject Blogs page SEO metadata
 const blogsMetadata = getPageMetadata('blogs')
 injectEnhancedMetaTags(blogsMetadata)
+injectMultipleSchemas([
+  generateOrganizationSchema(),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://nihalhealthcare.com/' },
+    { name: 'Blogs', url: 'https://nihalhealthcare.com/blogs.html' },
+  ]),
+])
 
 
 document.querySelector('#app').innerHTML = `

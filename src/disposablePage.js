@@ -1,5 +1,6 @@
 import './style.css'
 
+
 import { navbar } from './components/navbar/navbar'
 
 import { footer } from './components/footer/footer'
@@ -17,12 +18,23 @@ import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
 
 // SEO Metadata Injection
-import { injectEnhancedMetaTags, injectMultipleSchemas } from './utils/seoMeta'
+import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
+import { injectGTM } from './utils/gtm.js';
+
+injectGTM();
 
 // Inject Disposable Syringes page SEO metadata
 const disposableMetadata = getPageMetadata('disposableSyringes')
 injectEnhancedMetaTags(disposableMetadata)
+injectMultipleSchemas([
+  generateOrganizationSchema(),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://nihalhealthcare.com/' },
+    { name: 'Products', url: 'https://nihalhealthcare.com/products.html' },
+    { name: 'Disposable Syringes', url: 'https://nihalhealthcare.com/disposable-syringes.html' },
+  ]),
+])
 
 const product = productData.disposable
 

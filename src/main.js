@@ -1,5 +1,6 @@
 import './style.css'
 
+
 import { navbar } from './components/navbar/navbar'
 import { navbarAnimation } from './components/navbar/navbarAnimation'
 import { navbarFunctionality } from './components/navbar/navbarFunctionality'
@@ -26,19 +27,29 @@ import { feedbackFunctionality } from './components/feedback/feedbackFunctionali
 import { blogsAnimation } from './components/blogs/blogsAnimation'
 import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
+import { faq } from './components/faq/faq'
+import { faqAnimation } from './components/faq/faqAnimation'
 
 // SEO Metadata Injection
-import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateHomePageSchema } from './utils/seoMeta'
+import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateHomePageSchema, generateFAQSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
+import { faqData } from './data/faqData.js'
+import { injectGTM } from './utils/gtm.js';
+
+injectGTM();
 
 // Inject homepage SEO metadata
 const homeMetadata = getPageMetadata('home')
 injectEnhancedMetaTags(homeMetadata)
 
-// Inject Organization and HomePage schemas
+// Inject schemas: Organization, WebSite, FAQPage, BreadcrumbList
 const schemas = [
   generateOrganizationSchema({ baseUrl: 'https://nihalhealthcare.com', phone: '+919218511425', email: 'contact@nihalhealthcare.com', whatsapp: '+919218511425' }),
-  generateHomePageSchema('https://nihalhealthcare.com')
+  generateHomePageSchema('https://nihalhealthcare.com'),
+  generateFAQSchema(faqData),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://nihalhealthcare.com/' },
+  ]),
 ]
 injectMultipleSchemas(schemas)
 
@@ -53,6 +64,7 @@ document.querySelector("#app").innerHTML = `
   ${certificationsGrid(3, true, true)}
   ${blogsGrid(3, true, true)}
   ${contactCta()}
+  ${faq()}
   ${feedback()}
   ${footer()}
 `
@@ -72,3 +84,4 @@ footerAnimation()
 feedbackFunctionality()
 blogsAnimation()
 whatsappButtonFunctionality()
+faqAnimation()

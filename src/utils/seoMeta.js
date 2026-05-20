@@ -365,7 +365,7 @@ export const generateOrganizationSchema = (config = {}) => {
     url: baseUrl,
     logo: `${baseUrl}/assets/logo.png`,
     description: 'Leading manufacturer and supplier of sterile medical syringes and hypodermic needles. ISO 13485 certified. ETO sterilized medical devices.',
-    foundingDate: '2020',
+    foundingDate: '2007',
     foundingLocation: 'India',
     contactPoint: {
       '@type': 'ContactPoint',
@@ -376,12 +376,12 @@ export const generateOrganizationSchema = (config = {}) => {
       areaServed: 'IN',
       availableLanguageId: 'en',
     },
-    sameAs: [
-      'https://www.facebook.com/nihalhealthcare',
-      'https://www.linkedin.com/company/nihal-healthcare',
-      'https://www.youtube.com/@nihalhealthcare',
-      'https://www.instagram.com/nihalhealthcare',
-    ],
+    // sameAs: [
+    //   'https://www.facebook.com/nihalhealthcare',
+    //   'https://www.linkedin.com/company/nihal-healthcare',
+    //   'https://www.youtube.com/@nihalhealthcare',
+    //   'https://www.instagram.com/nihalhealthcare',
+    // ],
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IN',
@@ -676,4 +676,58 @@ export const injectMultipleSchemas = (schemas) => {
     script.textContent = JSON.stringify(schema, null, 2);
     document.head.appendChild(script);
   });
+};
+
+/**
+ * Generate BreadcrumbList schema for any page
+ * @param {Array} items - [{ name, url }] — last item url can be omitted
+ */
+export const generateBreadcrumbSchema = (items, baseUrl = 'https://nihalhealthcare.com') => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url
+        ? item.url.startsWith('http')
+          ? item.url
+          : `${baseUrl}${item.url}`
+        : undefined,
+    })),
+  };
+};
+
+/**
+ * Generate ItemList schema for a product listing page
+ * @param {Array} products - [{ name, url, description, image }]
+ */
+export const generateProductListSchema = (products, baseUrl = 'https://nihalhealthcare.com') => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Nihal Healthcare Medical Products',
+    description: 'Complete range of ISO 13485 certified sterile medical devices — syringes and hypodermic needles.',
+    numberOfItems: products.length,
+    itemListElement: products.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: product.name,
+        description: product.description,
+        url: product.url.startsWith('http') ? product.url : `${baseUrl}${product.url}`,
+        image: product.image || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare.svg`,
+        brand: { '@type': 'Brand', name: 'Nihal Healthcare' },
+        manufacturer: { '@type': 'Organization', name: 'Nihal Healthcare', url: baseUrl },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'INR',
+          availability: 'https://schema.org/InStock',
+          url: product.url.startsWith('http') ? product.url : `${baseUrl}${product.url}`,
+        },
+      },
+    })),
+  };
 };

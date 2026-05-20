@@ -8,18 +8,26 @@ import './style.css'
 import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
 
+
 // SEO Metadata Injection
-import { injectEnhancedMetaTags, injectMultipleSchemas, generateLocalBusinessSchema, generateContactPointSchema } from './utils/seoMeta'
+import { injectEnhancedMetaTags, injectMultipleSchemas, generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
+import { injectGTM } from './utils/gtm.js';
+
+injectGTM();
 
 // Inject Contact page SEO metadata
 const contactMetadata = getPageMetadata('contact')
 injectEnhancedMetaTags(contactMetadata)
 
-// Inject LocalBusiness and ContactPoint schemas
+// Inject LocalBusiness, ContactPoint and Breadcrumb schemas
 const schemas = [
   generateLocalBusinessSchema({ baseUrl: 'https://nihalhealthcare.com', phone: '+919218511425', email: 'contact@nihalhealthcare.com' }),
-  generateContactPointSchema({ phone: '+919218511425', email: 'contact@nihalhealthcare.com' })
+  generateContactPointSchema({ phone: '+919218511425', email: 'contact@nihalhealthcare.com' }),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://nihalhealthcare.com/' },
+    { name: 'Contact', url: 'https://nihalhealthcare.com/contact.html' },
+  ]),
 ]
 injectMultipleSchemas(schemas)
 

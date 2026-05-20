@@ -4,7 +4,7 @@
  */
 
 const BASE_URL = 'https://nihalhealthcare.com';
-const OG_IMAGE = `${BASE_URL}/assets/images/brand/og-image-nihal-healthcare.jpg`;
+const OG_IMAGE = `${BASE_URL}/assets/images/brand/og-image-nihal-healthcare.png`;
 
 export const pageMetadata = {
   home: {
@@ -144,7 +144,7 @@ export const organizationInfo = {
   name: 'Nihal Healthcare',
   description: 'Leading manufacturer and supplier of sterile medical syringes and hypodermic needles.',
   logo: `${BASE_URL}/assets/logo.png`,
-  foundingDate: '2020',
+  foundingDate: '2007',
   foundingLocation: 'India',
   socials: {
     facebook: 'https://www.facebook.com/nihalhealthcare',

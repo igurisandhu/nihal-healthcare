@@ -2,6 +2,7 @@
  * Entry point for variant detail pages
  */
 import { navbar } from './components/navbar/navbar.js';
+import { injectGTM } from './utils/gtm.js'
 import { footer } from './components/footer/footer.js';
 import { navbarAnimation } from './components/navbar/navbarAnimation.js';
 import { navbarFunctionality } from './components/navbar/navbarFunctionality.js';
@@ -9,6 +10,8 @@ import { footerAnimation } from './components/footer/footerAnimation.js';
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality.js';
 import { VariantDetailPage } from './components/products/variantDetailPage.js';
 import { injectMetaTags, injectSchema, generateMetaTags, generateProductSchema, addBreadcrumbsToProductDetail, injectMultipleSchemas } from './utils/seoMeta.js';
+
+injectGTM();
 
 export async function initVariantDetailPage(variantSlug) {
   // Get variant from database
