@@ -1,0 +1,1 @@
+import{n as e}from"./ScrollTrigger-N39Bzxb5.js";var t=()=>{e.from(`.navbar`,{x:-100,opacity:0,duration:1,ease:`power4.in`})};export{t};
