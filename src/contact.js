@@ -7,6 +7,7 @@ import { navbarFunctionality } from './components/navbar/navbarFunctionality'
 import './style.css'
 import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
+import { contactFormFunctionality } from './components/contact/contactFormFunctionality.js'
 
 
 // SEO Metadata Injection
@@ -49,5 +50,5 @@ navbarAnimation()
 navbarFunctionality()
 footerAnimation()
 
-contactAnimation()
 whatsappButtonFunctionality()
+contactFormFunctionality()

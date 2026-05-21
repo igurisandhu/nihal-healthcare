@@ -11,7 +11,7 @@ export const navbar = () => {
 
         <div class="flex items-center justify-between h-20">
 
-          <a href="/index.html" class="flex items-center">
+          <a href="/" class="flex items-center">
             <img 
               src="${logo}" 
               alt="Nihal Healthcare Logo"

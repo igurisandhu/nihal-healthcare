@@ -1,5 +1,14 @@
 export const feedback = () => {
 
+  const ratingSections = [
+    "Rate Your Experience",
+    "Service",
+    "Product Quality",
+    "Product Performance",
+    "Packaging",
+    "Support"
+  ];
+
   return `
 
     <section class="
@@ -40,12 +49,13 @@ export const feedback = () => {
           <h2 class="
             mt-5
             text-4xl
+            md:text-5xl
             font-bold
             text-slate-900
             leading-tight
           ">
 
-            Share Your Healthcare Experience
+            Share Your Experience
 
           </h2>
 
@@ -67,17 +77,21 @@ export const feedback = () => {
         <!-- FORM -->
         <div class="mt-14">
 
-          <form class="
-            bg-white
-            border
-            border-slate-200
-            rounded-[32px]
-            p-6
-            md:p-10
-            shadow-sm
-          ">
+          <form
+            id="feedback-form"
+            class="
+              bg-white
+              border
+              border-slate-200
+              rounded-[32px]
+              p-6
+              md:p-10
+              shadow-sm
+              space-y-6
+            "
+          >
 
-            <!-- TOP GRID -->
+            <!-- INPUTS -->
             <div class="
               grid
               md:grid-cols-2
@@ -85,216 +99,164 @@ export const feedback = () => {
             ">
 
               <!-- NAME -->
-              <div>
-
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  class="
-                    w-full
-                    px-5
-                    py-4
-                    rounded-2xl
-                    border
-                    border-slate-200
-                    bg-stone-50
-                    outline-none
-                    focus:border-cyan-500
-                    transition-all
-                    duration-300
-                  "
-                />
-
-              </div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                class="
+                  w-full
+                  px-5
+                  py-4
+                  rounded-2xl
+                  border
+                  border-slate-200
+                  bg-stone-50
+                  outline-none
+                  focus:border-cyan-500
+                  transition-all
+                  duration-300
+                "
+              />
 
               <!-- EMAIL -->
-              <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                class="
+                  w-full
+                  px-5
+                  py-4
+                  rounded-2xl
+                  border
+                  border-slate-200
+                  bg-stone-50
+                  outline-none
+                  focus:border-cyan-500
+                  transition-all
+                  duration-300
+                "
+              />
 
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  class="
-                    w-full
-                    px-5
-                    py-4
-                    rounded-2xl
-                    border
-                    border-slate-200
-                    bg-stone-50
-                    outline-none
-                    focus:border-cyan-500
-                    transition-all
-                    duration-300
-                  "
-                />
-
-              </div>
-
-            </div>
-
-            <!-- RATING -->
-<div class="mt-8">
-
-  <p class="
-    text-sm
-    font-semibold
-    text-slate-700
-  ">
-
-    Rate Your Experience
-
-  </p>
-
-  <div class="
-    mt-4
-    flex
-    items-center
-    gap-3
-    star-rating
-  ">
-
-    ${[1,2,3,4,5].map((star, index) => `
-
-      <button
-        type="button"
-        class="
-          rating-star
-          text-4xl
-          text-slate-300
-          hover:text-yellow-400
-          transition-all
-          duration-300
-        "
-        data-rating="${index + 1}"
-      >
-
-        ★
-
-      </button>
-
-    `).join('')}
-
-  </div>
-
-</div>
-
-            <!-- CATEGORY -->
-            <div class="mt-8">
-
-              <p class="
-                text-sm
-                font-semibold
-                text-slate-700
-              ">
-
-                Feedback Category
-
-              </p>
-
-              <div class="
-                mt-4
-                flex
-                flex-wrap
-                gap-3
-              ">
-
-               ${[
-  'Products',
-  'Manufacturing',
-  'Quality',
-  'Support'
-].map(item => `
-
-  <button
-    type="button"
-    class="
-      feedback-option
-      px-5
-      py-3
-      rounded-full
-      border
-      border-slate-200
-      bg-stone-50
-      text-slate-700
-      hover:bg-slate-900
-      hover:text-white
-      transition-all
-      duration-300
-      text-sm
-      font-medium
-    "
-  >
-
-    ${item}
-
-  </button>
-
-`).join('')}
-
-              </div>
+              <!-- PHONE -->
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone Number"
+                required
+                class="
+                  md:col-span-2
+                  w-full
+                  px-5
+                  py-4
+                  rounded-2xl
+                  border
+                  border-slate-200
+                  bg-stone-50
+                  outline-none
+                  focus:border-cyan-500
+                  transition-all
+                  duration-300
+                "
+              />
 
             </div>
 
-            <!-- QUICK TAGS -->
-            <div class="mt-8">
+            <!-- RATING SECTIONS -->
+            <div class="space-y-5">
 
-              <p class="
-                text-sm
-                font-semibold
-                text-slate-700
-              ">
+              ${ratingSections.map((title) => `
 
-                Select Feedback
+                <div class="
+                  rating-card
+                  bg-stone-50
+                  border
+                  border-slate-200
+                  rounded-3xl
+                  px-5
+                  py-3
+                  hover:border-cyan-400
+                  transition-all
+                  duration-300
+                ">
 
-              </p>
+                  <div class="
+                    flex
+                    items-center
+                    justify-between
+                    gap-4
+                    flex-wrap
+                  ">
 
-              <div class="
-                mt-4
-                flex
-                flex-wrap
-                gap-3
-              ">
-${[
-  'Excellent Quality',
-  'Fast Support',
-  'Trusted Products',
-  'Professional Team'
-].map(item => `
+                    <div>
 
-  <button
-    type="button"
-    class="
-      feedback-tag
-      px-5
-      py-3
-      rounded-full
-      text-slate-700
-      hover:bg-slate-900
-      hover:text-white
-      border
-      border-transparent
-      transition-all
-      duration-300
-      text-sm
-      font-medium
-    "
-  >
+                      <p class="
+                        text-base
+                        font-semibold
+                        text-slate-800
+                      ">
 
-    ${item}
+                        ${title}
 
-  </button>
+                      </p>
 
-`).join('')}
+                    </div>
 
-              </div>
+                    <div class="
+                      flex
+                      items-center
+                      gap-2
+                      star-rating
+                    ">
+
+                      ${[1,2,3,4,5].map((star) => `
+
+                        <button
+                          type="button"
+                          class="
+                            rating-star
+                            text-3xl
+                            text-slate-300
+                            hover:text-yellow-400
+                            hover:scale-125
+                            active:scale-95
+                            transition-all
+                            duration-200
+                          "
+                          data-rating="${star}"
+                        >
+
+                          ★
+
+                        </button>
+
+                      `).join("")}
+
+                    </div>
+
+                  </div>
+
+                  <input
+                    type="hidden"
+                    class="rating-value"
+                    name="${title}"
+                    value="0"
+                  />
+
+                </div>
+
+              `).join("")}
 
             </div>
 
             <!-- MESSAGE -->
-            <div class="mt-8">
+            <div>
 
               <textarea
-                rows="3"
+                rows="4"
+                name="message"
                 placeholder="Additional feedback..."
                 class="
                   w-full
@@ -318,7 +280,6 @@ ${[
             <button
               type="submit"
               class="
-                mt-8
                 w-full
                 bg-slate-900
                 hover:bg-cyan-500
@@ -326,8 +287,10 @@ ${[
                 py-4
                 rounded-2xl
                 font-semibold
+                text-base
                 transition-all
                 duration-300
+                hover:-translate-y-1
               "
             >
 
@@ -343,6 +306,6 @@ ${[
 
     </section>
 
-  `
+  `;
 
-}
+};

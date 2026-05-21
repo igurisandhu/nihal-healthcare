@@ -137,7 +137,7 @@ export function VariantDetailPage(variant) {
               rel="noopener noreferrer"
               class="block w-full bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-lg font-bold text-lg transition text-center mb-4 shadow-lg"
             >
-              💬 Message for Quote
+              Get Quote
             </a>
 
             <p class="text-xs text-slate-500 text-center">
@@ -284,7 +284,7 @@ export function VariantDetailPage(variant) {
             rel="noopener noreferrer"
             class="inline-block bg-white text-cyan-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition"
           >
-            💬 Request Quote on WhatsApp
+            Get in Touch
           </a>
         </div>
       </section>

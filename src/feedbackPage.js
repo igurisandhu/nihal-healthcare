@@ -14,6 +14,7 @@ import { testimonials } from './components/testimonials/testimonials'
 import { feedback } from './components/feedback/feedback'
 import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
+import { feedbackFunctionality } from './components/feedback/feedbackFunctionality.js'
 
 // SEO Metadata Injection
 import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
@@ -54,3 +55,4 @@ document.querySelector('#app').innerHTML = `
 
 `
 whatsappButtonFunctionality()
+feedbackFunctionality()

@@ -104,7 +104,7 @@ export function CategoryPage(categoryData) {
                 onclick="event.stopPropagation()"
                 class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2.5 px-3 rounded-lg text-sm font-semibold transition text-center"
               >
-                Quote
+                Get Quote
               </a>
             </div>
 
@@ -169,7 +169,7 @@ export function CategoryPage(categoryData) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            💬 Message on WhatsApp
+            Get in Touch
           </a>
         </div>
       </section>

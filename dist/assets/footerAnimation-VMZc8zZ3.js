@@ -1,1 +1,0 @@
-import{n as e,t}from"./ScrollTrigger-N39Bzxb5.js";e.registerPlugin(t);var n=()=>{window.innerWidth>=1024&&e.from(`.footer-section`,{opacity:0,y:50,duration:1,scrollTrigger:{trigger:`.footer-section`,start:`top 90%`}})};export{n as t};

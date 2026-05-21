@@ -1,88 +1,119 @@
+// feedbackFunctionality.js
+
 export const feedbackFunctionality = () => {
 
   // STAR RATING
-  const stars = document.querySelectorAll('.rating-star')
+  const ratingGroups = document.querySelectorAll('.star-rating');
 
-  stars.forEach((star, index) => {
+  ratingGroups.forEach(group => {
 
-    star.addEventListener('click', () => {
+    const stars = group.querySelectorAll('.rating-star');
 
-      stars.forEach((item, i) => {
+    stars.forEach((star, index) => {
 
-        if(i <= index){
+      star.addEventListener('click', () => {
 
-          item.classList.remove('text-slate-300')
+        // UPDATE STAR COLORS
+        stars.forEach((item, i) => {
 
-          item.classList.add('text-yellow-400')
+          if (i <= index) {
+
+            item.classList.remove('text-slate-300');
+
+            item.classList.add(
+              'text-yellow-400',
+              'scale-110'
+            );
+
+          }
+
+          else {
+
+            item.classList.remove(
+              'text-yellow-400',
+              'scale-110'
+            );
+
+            item.classList.add('text-slate-300');
+
+          }
+
+        });
+
+        // SAVE RATING VALUE
+        const ratingCard =
+          group.closest('.rating-card');
+
+        const hiddenInput =
+          ratingCard.querySelector('.rating-value');
+
+        if (hiddenInput) {
+
+          hiddenInput.value = index + 1;
 
         }
 
-        else{
+      });
 
-          item.classList.remove('text-yellow-400')
+    });
 
-          item.classList.add('text-slate-300')
+  });
 
-        }
 
-      })
+  // FEEDBACK FORM SUBMIT
+  const form = document.querySelector('#feedback-form');
 
-    })
+  if (!form) return;
 
-  })
+  form.addEventListener('submit', (e) => {
 
-  // CATEGORY OPTIONS
-  const options = document.querySelectorAll('.feedback-option')
+    e.preventDefault();
 
-  options.forEach(option => {
+    const formData = new FormData(form);
 
-    option.addEventListener('click', () => {
+    const name = formData.get('name');
 
-      options.forEach(item => {
+    const email = formData.get('email');
 
-        item.classList.remove(
-          'bg-slate-900',
-          'text-white'
-        )
+    const phone = formData.get('phone');
 
-        item.classList.add(
-          'bg-stone-50',
-          'text-slate-700'
-        )
+    const message = formData.get('message');
 
-      })
+    // GET ALL RATINGS
+    const ratings = [];
 
-      option.classList.remove(
-        'bg-stone-50',
-        'text-slate-700'
-      )
+    form
+      .querySelectorAll('.rating-value')
+      .forEach(input => {
 
-      option.classList.add(
-        'bg-slate-900',
-        'text-white'
-      )
+        ratings.push(
+          `${input.name}: ${input.value}/5`
+        );
 
-    })
+      });
 
-  })
+    const whatsappMessage = `New Feedback Submission
 
-  // FEEDBACK TAGS
-  const tags = document.querySelectorAll('.feedback-tag')
+Name: ${name}
 
-  tags.forEach(tag => {
+Email: ${email}
 
-    tag.addEventListener('click', () => {
+Phone: ${phone}
 
-      tag.classList.toggle('bg-cyan-500')
+${ratings.join('\n')}
 
-      tag.classList.toggle('text-white')
+Additional Feedback:
+${message}`;
 
-      tag.classList.toggle('bg-cyan-50')
+    const phoneNumber = '919218511425';
 
-      tag.classList.toggle('text-cyan-600')
+    const whatsappURL =
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-    })
+    window.location.href = whatsappURL;
 
-  })
+    form.reset();
 
-}
+  });
+
+};

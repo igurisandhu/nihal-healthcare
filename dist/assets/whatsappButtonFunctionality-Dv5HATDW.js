@@ -1,1 +1,0 @@
-var e=()=>{let e=document.querySelector(`.whatsapp-floating-btn`);e&&window.addEventListener(`scroll`,()=>{window.scrollY>100?(e.classList.add(`opacity-100`),e.classList.remove(`opacity-0`)):e.classList.add(`opacity-100`)})};export{e as t};

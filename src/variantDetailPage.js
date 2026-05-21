@@ -7,6 +7,7 @@ import { footer } from './components/footer/footer.js';
 import { navbarAnimation } from './components/navbar/navbarAnimation.js';
 import { navbarFunctionality } from './components/navbar/navbarFunctionality.js';
 import { footerAnimation } from './components/footer/footerAnimation.js';
+import { whatsappButton } from './components/whatsapp/whatsappButton';
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality.js';
 import { VariantDetailPage } from './components/products/variantDetailPage.js';
 import { injectMetaTags, injectSchema, generateMetaTags, generateProductSchema, addBreadcrumbsToProductDetail, injectMultipleSchemas } from './utils/seoMeta.js';
@@ -45,10 +46,12 @@ export async function initVariantDetailPage(variantSlug) {
   // Initialize navbar and footer
   const navElement = document.createElement('div');
   const mainElement = document.createElement('main');
+  const whatsappButtonElement = document.createElement('div');
   const footerElement = document.createElement('div');
 
   mainElement.className = 'pt-24 pb-20';
   navElement.innerHTML = navbar();
+  whatsappButtonElement.innerHTML = whatsappButton()
   footerElement.innerHTML = footer();
 
   // Insert into DOM
@@ -57,6 +60,7 @@ export async function initVariantDetailPage(variantSlug) {
   mainElement.innerHTML = VariantDetailPage(variantData);
   pageRoot.replaceWith(mainElement);
   document.body.appendChild(footerElement);
+  document.body.appendChild(whatsappButtonElement);
 
   // Initialize animations and functionality
   navbarAnimation();

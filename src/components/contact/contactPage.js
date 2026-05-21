@@ -33,119 +33,74 @@ export const contactPage = () => {
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 mt-16">
 
           <!-- Office Details -->
-<div class="bg-slate-900 rounded-[32px] p-8 md:p-10 text-white">
+          <div class="bg-slate-900 rounded-[32px] p-8 md:p-10 text-white">
 
-  <h2 class="text-3xl font-bold">
+            <h2 class="text-3xl font-bold">
 
-    Office Details
+              Office Details
 
-  </h2>
+            </h2>
 
-  <p class="mt-4 text-slate-300 leading-relaxed">
+            <p class="mt-4 text-slate-300 leading-relaxed">
 
-    Reach out to Nihal Healthcare for healthcare manufacturing solutions, product inquiries, and business partnerships.
+              Reach out to Nihal Healthcare for healthcare manufacturing solutions, product inquiries, and business partnerships.
 
-  </p>
+            </p>
 
-  <!-- Contact Items -->
-  <div class="mt-10 space-y-8">
+            <div class="mt-10 space-y-8">
 
-    <!-- Address -->
-    <div>
+              <div>
 
-      <h3 class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
+                <h3 class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
 
-        Address
+                  Address
 
-      </h3>
+                </h3>
 
-      <p class="mt-3 text-slate-300 leading-relaxed">
+                <p class="mt-3 text-slate-300 leading-relaxed">
 
-        Plot No.33, EPIP Phase-I, Jharmajri, <br>
-        Tehsil Baddi, Solan, Himachal Pradesh, <br>
-        173205, India
+                  Plot No.33, EPIP Phase-I, Jharmajri, <br>
+                  Tehsil Baddi, Solan, Himachal Pradesh, <br>
+                  173205, India
 
-      </p>
+                </p>
 
-    </div>
+              </div>
 
-    <!-- Phone -->
-    <div>
+              <div>
 
-      <h3 class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
+                <h3 class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
 
-        Contact Number
+                  Contact Number
 
-      </h3>
+                </h3>
 
-      <div class="mt-3 space-y-2 text-slate-300">
+                <div class="mt-3 space-y-2 text-slate-300">
 
-        <p>+91 9218511425</p>
+                  <p>+91 9218511425</p>
 
-        <p>+91 9218511425</p>
+                </div>
 
-        <p>+91 9218511425</p>
+              </div>
 
-      </div>
+              <div>
 
-    </div>
+                <h3 class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
 
-    <!-- Email -->
-    <div>
+                  Email
 
-      <h3 class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
+                </h3>
 
-        Email
+                <p class="mt-3 text-slate-300 break-all">
 
-      </h3>
+                  nihalhealth2012@gmail.com
 
-      <p class="mt-3 text-slate-300 break-all">
+                </p>
 
-        nihalhealth2012@gmail.com
+              </div>
 
-      </p>
+            </div>
 
-    </div>
-
-    <!-- Website -->
-    <div>
-
-      <h3 class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
-
-        Website
-
-      </h3>
-
-      <a
-        href="https://www.nihalhealthcare.com"
-        target="_blank"
-        class="mt-3 inline-block text-cyan-400 hover:text-cyan-300 transition-all duration-300"
-      >
-
-        www.nihalhealthcare.com
-
-      </a>
-
-    </div>
-
-    <!-- SRN -->
-    <div>
-
-      <h3 class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
-
-        SRN
-
-      </h3>
-
-      <p class="mt-3 text-slate-300">
-
-        IN-MF-000020686
-
-      </p>
-
-    </div>
-
-  </div>
           </div>
 
           <!-- Contact Form -->
@@ -163,8 +118,11 @@ export const contactPage = () => {
 
             </p>
 
-            <!-- Form -->
-            <form class="mt-10 space-y-6">
+            <!-- FORM -->
+            <form
+              id="contact-form"
+              class="mt-10 space-y-6"
+            >
 
               <!-- Name -->
               <div>
@@ -177,7 +135,9 @@ export const contactPage = () => {
 
                 <input
                   type="text"
+                  name="name"
                   placeholder="Enter your name"
+                  required
                   class="w-full h-14 rounded-2xl border border-slate-300 px-5 outline-none focus:border-cyan-500 transition-all duration-300"
                 />
 
@@ -194,7 +154,9 @@ export const contactPage = () => {
 
                 <input
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
+                  required
                   class="w-full h-14 rounded-2xl border border-slate-300 px-5 outline-none focus:border-cyan-500 transition-all duration-300"
                 />
 
@@ -211,7 +173,9 @@ export const contactPage = () => {
 
                 <input
                   type="text"
+                  name="subject"
                   placeholder="Enter subject"
+                  required
                   class="w-full h-14 rounded-2xl border border-slate-300 px-5 outline-none focus:border-cyan-500 transition-all duration-300"
                 />
 
@@ -228,7 +192,9 @@ export const contactPage = () => {
 
                 <textarea
                   rows="6"
+                  name="message"
                   placeholder="Write your message..."
+                  required
                   class="w-full rounded-2xl border border-slate-300 px-5 py-4 outline-none focus:border-cyan-500 transition-all duration-300 resize-none"
                 ></textarea>
 
@@ -249,22 +215,6 @@ export const contactPage = () => {
           </div>
 
         </div>
-
-        <!-- Map -->
-<div class="mt-16 rounded-[32px] overflow-hidden border border-slate-200 shadow-sm">
-
-  <iframe
-    src="https://www.google.com/maps?q=Plot%20No.33,%20EPIP%20Phase-I,%20Jharmajri,%20Tehsil%20Baddi,%20Solan,%20Himachal%20Pradesh,%20173205,%20India&output=embed"
-    width="100%"
-    height="500"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    class="w-full"
-  ></iframe>
-
-</div>
 
       </div>
 
