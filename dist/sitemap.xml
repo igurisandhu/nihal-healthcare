@@ -13,13 +13,6 @@
 
   <!-- Main Pages -->
   <url>
-    <loc>https://nihalhealthcare.com/index.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
     <loc>https://nihalhealthcare.com/about.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>daily</changefreq>
@@ -73,28 +66,6 @@
     <lastmod>2026-05-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- Product Category Pages -->
-  <url>
-    <loc>https://nihalhealthcare.com/disposable-syringes.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://nihalhealthcare.com/safety-syringes.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://nihalhealthcare.com/insulin-syringes.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <!-- Hypodermic Needles Category and Variants -->

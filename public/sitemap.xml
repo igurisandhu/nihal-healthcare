@@ -13,13 +13,6 @@
 
   <!-- Main Pages -->
   <url>
-    <loc>https://nihalhealthcare.com/index.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
     <loc>https://nihalhealthcare.com/about.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>daily</changefreq>

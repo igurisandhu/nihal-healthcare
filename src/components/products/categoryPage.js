@@ -59,7 +59,7 @@ export function CategoryPage(categoryData) {
                       'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=400&h=300&fit=crop';
 
       return `
-        <div onclick="window.location.href='/products/${variant.categoryId}/${variant.slug}.html'" class="variant-card group bg-white rounded-[24px] overflow-hidden border border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
+        <div onclick="window.location.href='/products/${variant.categoryId}/${variant.slug}.html'" class="variant-card group bg-white rounded-[24px] overflow-hidden border border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300 cursor-pointer">
         
           <div class="relative h-56 bg-slate-100 overflow-hidden">
             <img 
