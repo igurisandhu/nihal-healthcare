@@ -4,7 +4,7 @@ import { resolve } from 'path'
 import { pageMetadata } from './src/utils/pageMetadata.js'
 
 const BASE_URL = 'https://nihalhealthcare.com'
-const OG_IMAGE = `${BASE_URL}/assets/images/brand/og-image-nihal-healthcare.jpg`
+const OG_IMAGE = `${BASE_URL}/assets/images/brand/og-image-nihal-healthcare-logo.jpg`
 
 // Maps each HTML file path → key in pageMetadata
 const PAGE_META_MAP = {

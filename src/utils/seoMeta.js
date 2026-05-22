@@ -129,14 +129,14 @@ export const generateMetaTags = (data, isVariant = false) => {
     title = `${data.name} | Medical Syringes & Needles | Nihal Healthcare`;
     description = `${data.briefDescription}. Available with ${data.needleGauges?.length || data.gauge ? 'multiple options' : 'various sizes'}. ISO 13485 certified. ETO sterilized. Contact for quote.`;
     keywords = `${data.name}, ${data.categoryName}, ${data.size || data.gauge}, sterile syringe, hypodermic needle, medical device, ISO 13485, ${data.emdnCode}`;
-    ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare.jpg';
+    ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare-logo.jpg';
     url = `${baseUrl}/products/${data.categoryId}/${data.slug}.html`;
   } else {
     // Category page
     title = `${data.name} | Nihal Healthcare - Medical Supplies`;
     description = data.description;
     keywords = `${data.name}, sterile syringes, hypodermic needles, medical devices, ISO 13485, ETO sterilized, bulk ordering`;
-    ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare.jpg';
+    ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare-logo.jpg';
     url = `${baseUrl}/products/${data.slug}.html`;
   }
 
@@ -647,7 +647,7 @@ export const generateProductListSchema = (products, baseUrl = 'https://nihalheal
         name: product.name,
         description: product.description,
         url: product.url.startsWith('http') ? product.url : `${baseUrl}${product.url}`,
-        image: product.image || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare.jpg`,
+        image: product.image || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare-logo.jpg`,
         brand: { '@type': 'Brand', name: 'Nihal Healthcare' },
         manufacturer: { '@type': 'Organization', name: 'Nihal Healthcare', url: baseUrl },
         offers: {

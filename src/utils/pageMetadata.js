@@ -4,7 +4,7 @@
  */
 
 const BASE_URL = 'https://nihalhealthcare.com';
-const OG_IMAGE = `${BASE_URL}/assets/images/brand/og-image-nihal-healthcare.jpg`;
+const OG_IMAGE = `${BASE_URL}/assets/images/brand/og-image-nihal-healthcare-logo.jpg`;
 
 export const pageMetadata = {
   home: {
