@@ -647,7 +647,7 @@ export const generateProductListSchema = (products, baseUrl = 'https://nihalheal
         name: product.name,
         description: product.description,
         url: product.url.startsWith('http') ? product.url : `${baseUrl}${product.url}`,
-        image: product.image || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare.svg`,
+        image: product.image || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare.jpg`,
         brand: { '@type': 'Brand', name: 'Nihal Healthcare' },
         manufacturer: { '@type': 'Organization', name: 'Nihal Healthcare', url: baseUrl },
         offers: {

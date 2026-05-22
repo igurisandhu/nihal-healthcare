@@ -1,0 +1,1 @@
+import"./gtm-CTlVB8P2.js";import{t as e}from"./categoryPage-_6UrW3Cp.js";e(`sterile-hypodermic-syringes-without-needle`);
