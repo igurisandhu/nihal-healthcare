@@ -2,7 +2,7 @@
  * CategoryPage Component
  * Displays all variants of a product category
  */
-import { injectMeta, injectSchema, generateMetaTags, generateCollectionSchema } from '../../utils/seoMeta.js';
+import { injectMeta, generateMetaTags, generateCollectionSchema, generateBreadcrumbSchema, injectMultipleSchemas } from '../../utils/seoMeta.js';
 import { WhatsAppQuoteButton } from './whatsappQuoteButton.js';
 
 export function CategoryPage(categoryData) {
@@ -10,8 +10,13 @@ export function CategoryPage(categoryData) {
   const metaTags = generateMetaTags(categoryData, false);
   injectMeta(metaTags);
 
-  const schema = generateCollectionSchema(categoryData, categoryData.variants);
-  injectSchema(schema);
+  const collectionSchema = generateCollectionSchema(categoryData, categoryData.variants);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://nihalhealthcare.com/' },
+    { name: 'Products', url: 'https://nihalhealthcare.com/products.html' },
+    { name: categoryData.name },
+  ]);
+  injectMultipleSchemas([collectionSchema, breadcrumbSchema]);
 
   const variantsHtml = categoryData.variants
     .map((variant) => {

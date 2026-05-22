@@ -1,1 +1,0 @@
-import"./gtm-CZO3iEIl.js";import{t as e}from"./variantDetailPage-B4XFrwx1.js";e(`50ml-syringe-with-needle`);

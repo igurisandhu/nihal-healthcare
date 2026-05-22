@@ -2,11 +2,12 @@ import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
 import { pageMetadata } from './src/utils/pageMetadata.js'
+import { productsDatabase } from './src/data/productsDatabase.js'
 
 const BASE_URL = 'https://nihalhealthcare.com'
-const OG_IMAGE = `${BASE_URL}/assets/images/brand/og-image-nihal-healthcare-logo.jpg`
+const OG_IMAGE = `${BASE_URL}/assets/images/brand/og-image-nihal-healthcare.jpg`
 
-// Maps each HTML file path → key in pageMetadata
+// Maps each static page HTML path → key in pageMetadata
 const PAGE_META_MAP = {
   '/index.html': 'home',
   '/about.html': 'about',
@@ -28,10 +29,63 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;')
 }
 
+/** Builds the meta tag HTML string from a normalised meta object. */
+function buildTagsHtml({ title, description, keywords, ogImage, canonical, ogType }) {
+  const img = ogImage || OG_IMAGE
+  const url = canonical || BASE_URL
+  return [
+    `  <meta name="description" content="${escapeHtml(description)}" />`,
+    `  <meta name="keywords" content="${escapeHtml(keywords)}" />`,
+    `  <meta name="robots" content="index, follow" />`,
+    `  <meta name="author" content="Nihal Healthcare" />`,
+    `  <meta property="og:title" content="${escapeHtml(title)}" />`,
+    `  <meta property="og:description" content="${escapeHtml(description)}" />`,
+    `  <meta property="og:image" content="${escapeHtml(img)}" />`,
+    `  <meta property="og:url" content="${escapeHtml(url)}" />`,
+    `  <meta property="og:type" content="${ogType || 'website'}" />`,
+    `  <meta property="og:locale" content="en_US" />`,
+    `  <meta name="twitter:card" content="summary_large_image" />`,
+    `  <meta name="twitter:title" content="${escapeHtml(title)}" />`,
+    `  <meta name="twitter:description" content="${escapeHtml(description)}" />`,
+    `  <meta name="twitter:image" content="${escapeHtml(img)}" />`,
+    `  <link rel="canonical" href="${escapeHtml(url)}" />`,
+  ].join('\n')
+}
+
+/** Build meta for a product category page from productsDatabase. */
+function buildCategoryMeta(cat) {
+  return {
+    title: `${cat.name} | Nihal Healthcare - Medical Supplies`,
+    description: cat.description,
+    keywords: `${cat.name}, sterile syringes, hypodermic needles, medical devices, ISO 13485, ETO sterilized, bulk ordering`,
+    ogImage: cat.image ? `${BASE_URL}${cat.image}` : OG_IMAGE,
+    canonical: `${BASE_URL}/products/${cat.slug}.html`,
+    ogType: 'website',
+  }
+}
+
+/** Build meta for a product variant page from productsDatabase. */
+function buildVariantMeta(variant) {
+  const gaugeInfo = variant.needleGauges?.length
+    ? `${variant.needleGauges.length} gauge options`
+    : variant.gauge || 'multiple sizes'
+  return {
+    title: `${variant.name} | Medical Syringes & Needles | Nihal Healthcare`,
+    description: `${variant.briefDescription}. Available with ${gaugeInfo}. ISO 13485 certified. ETO sterilized. Contact for quote.`,
+    keywords: `${variant.name}, ${variant.categoryName}, ${variant.size || variant.gauge || ''}, sterile syringe, hypodermic needle, medical device, ISO 13485`,
+    ogImage: variant.image ? `${BASE_URL}${variant.image}` : OG_IMAGE,
+    canonical: `${BASE_URL}/products/${variant.categoryId}/${variant.slug}.html`,
+    ogType: 'product',
+  }
+}
+
 /**
- * Injects meta tags from pageMetadata.js into HTML files at build time.
- * This ensures crawlers and social-media scrapers see correct meta tags
- * without relying on JavaScript execution.
+ * Injects meta tags into every HTML file at build time so crawlers and
+ * social-media scrapers see correct tags without requiring JS execution.
+ * Sources:
+ *   - Static pages  → pageMetadata.js (via PAGE_META_MAP)
+ *   - Category pages → productsDatabase.categories (pattern: /products/{id}.html)
+ *   - Variant pages  → productsDatabase.variants   (pattern: /products/{cat}/{id}.html)
  */
 function injectMetaTagsPlugin() {
   return {
@@ -39,33 +93,43 @@ function injectMetaTagsPlugin() {
     transformIndexHtml: {
       order: 'pre',
       handler(html, ctx) {
-        const metaKey = PAGE_META_MAP[ctx.path]
-        if (!metaKey) return html
+        let meta = null
 
-        const meta = pageMetadata[metaKey]
+        // 1. Static pages (home, about, blogs, blog articles, etc.)
+        const metaKey = PAGE_META_MAP[ctx.path]
+        if (metaKey && pageMetadata[metaKey]) {
+          const m = pageMetadata[metaKey]
+          meta = {
+            title: m.title,
+            description: m.description,
+            keywords: m.keywords,
+            ogImage: m.ogImage || OG_IMAGE,
+            canonical: m.canonical || BASE_URL,
+            ogType: m.ogType || 'website',
+          }
+        }
+
+        // 2. Product category pages: /products/{categorySlug}.html
+        if (!meta) {
+          const catMatch = ctx.path.match(/^\/products\/([^/]+)\.html$/)
+          if (catMatch) {
+            const cat = productsDatabase.categories.find(c => c.id === catMatch[1])
+            if (cat) meta = buildCategoryMeta(cat)
+          }
+        }
+
+        // 3. Product variant pages: /products/{categorySlug}/{variantSlug}.html
+        if (!meta) {
+          const varMatch = ctx.path.match(/^\/products\/[^/]+\/([^/]+)\.html$/)
+          if (varMatch) {
+            const variant = productsDatabase.variants[varMatch[1]]
+            if (variant) meta = buildVariantMeta(variant)
+          }
+        }
+
         if (!meta) return html
 
-        const ogImage = meta.ogImage || OG_IMAGE
-        const canonical = meta.canonical || BASE_URL
-
-        const tags = [
-          `  <meta name="description" content="${escapeHtml(meta.description)}" />`,
-          `  <meta name="keywords" content="${escapeHtml(meta.keywords)}" />`,
-          `  <meta name="robots" content="index, follow" />`,
-          `  <meta name="author" content="Nihal Healthcare" />`,
-          `  <meta property="og:title" content="${escapeHtml(meta.title)}" />`,
-          `  <meta property="og:description" content="${escapeHtml(meta.description)}" />`,
-          `  <meta property="og:image" content="${escapeHtml(ogImage)}" />`,
-          `  <meta property="og:url" content="${escapeHtml(canonical)}" />`,
-          `  <meta property="og:type" content="${meta.ogType || 'website'}" />`,
-          `  <meta property="og:locale" content="en_US" />`,
-          `  <meta name="twitter:card" content="summary_large_image" />`,
-          `  <meta name="twitter:title" content="${escapeHtml(meta.title)}" />`,
-          `  <meta name="twitter:description" content="${escapeHtml(meta.description)}" />`,
-          `  <meta name="twitter:image" content="${escapeHtml(ogImage)}" />`,
-          `  <link rel="canonical" href="${escapeHtml(canonical)}" />`,
-        ].join('\n')
-
+        const tags = buildTagsHtml(meta)
         return html.replace(/(<\/head>)/, `${tags}\n  $1`)
       },
     },
