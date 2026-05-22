@@ -1,4 +1,4 @@
-import{d as e,g as t,h as n,i as r,t as i,v as a,y as o}from"./gtm-D69uwA8o.js";import{t as s}from"./footerAnimation-DKeORBd-.js";import{t as c}from"./blogsGrid-CXuAYuvo.js";import{n as l,t as u}from"./whatsappButtonFunctionality-DXb-Cey1.js";import{t as d}from"./pageMetadata-WzEHaUbT.js";var f=()=>`
+import{d as e,g as t,h as n,i as r,t as i,v as a,y as o}from"./gtm-D69uwA8o.js";import{t as s}from"./footerAnimation-DKeORBd-.js";import{t as c}from"./blogsGrid-CXuAYuvo.js";import{n as l,t as u}from"./whatsappButtonFunctionality-DXb-Cey1.js";import{t as d}from"./pageMetadata-BM_zFqmP.js";var f=()=>`
 
     <section class="
       pt-32

@@ -1,4 +1,4 @@
-import{g as e,h as t,i as n,l as r,o as i,t as a,v as o,y as s}from"./gtm-D69uwA8o.js";import{t as c}from"./navbarAnimation-nIwfTKzd.js";import{t as l}from"./navbarFunctionality-DYFdrxFV.js";import{t as u}from"./footerAnimation-DKeORBd-.js";import{n as d,t as f}from"./whatsappButtonFunctionality-DXb-Cey1.js";import{t as p}from"./pageMetadata-WzEHaUbT.js";var m=()=>`
+import{g as e,h as t,i as n,l as r,o as i,t as a,v as o,y as s}from"./gtm-D69uwA8o.js";import{t as c}from"./navbarAnimation-nIwfTKzd.js";import{t as l}from"./navbarFunctionality-DYFdrxFV.js";import{t as u}from"./footerAnimation-DKeORBd-.js";import{n as d,t as f}from"./whatsappButtonFunctionality-DXb-Cey1.js";import{t as p}from"./pageMetadata-BM_zFqmP.js";var m=()=>`
 
     <section class="contact-page pt-28 md:pt-36 pb-16 md:pb-24 lg:pb-28 bg-stone-50 overflow-hidden">
 
