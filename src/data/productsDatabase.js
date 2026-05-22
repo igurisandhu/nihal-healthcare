@@ -11,7 +11,7 @@ export const productsDatabase = {
       slug: 'sterile-hypodermic-syringes',
       shortDescription: 'High precision sterile disposable syringes with integrated needles for precise medication delivery',
       description: 'Our Sterile Hypodermic Syringes with Needle are engineered for accurate injection of medications, vaccine administration, blood sampling, and solution transfer. Made from high-grade polypropylene with stainless steel needles, sterilized using ETO method.',
-      image: null, // Will use first variant image or placeholder
+      image: "/assets/images/products/sterile-hypodermic-syringes-with-needle.png", // Will use first variant image or placeholder
       variantCount: 7,
     },
     {
@@ -20,7 +20,7 @@ export const productsDatabase = {
       slug: 'sterile-hypodermic-syringes-without-needle',
       shortDescription: 'Sterile syringes without needles for flexible fluid transfer and injection applications',
       description: 'Designed for transferring solutions between containers and precise fluid withdrawal or injection. Our needle-free syringes maintain the same high sterilization standards and are available in multiple sizes including tuberculin variants.',
-      image: null,
+      image: "/assets/images/products/sterile-hypodermic-syringes-without-needle.png",
       variantCount: 7,
     },
     {
@@ -29,11 +29,11 @@ export const productsDatabase = {
       slug: 'sterile-hypodermic-needles',
       shortDescription: 'Precision sterile needles for aspiration and injection of medical fluids',
       description: 'Our Sterile Hypodermic Needles are slender hollow instruments designed for aspiration and injection of fluids in medical applications. Available in multiple gauges (16G-26G) for different clinical needs.',
-      image: null,
+      image: "/assets/images/products/sterile-hypodermic-needles.png",
       variantCount: 9,
     },
   ],
-
+  
   variants: {
     // ==================== Category 1: Sterile Hypodermic Syringes with Needle ====================
     '1ml-syringe-with-needle': {
@@ -57,7 +57,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: "/assets/images/products/1ml-sterile-hypodermic-syringe-with-needle.png",
     },
     '2ml-syringe-with-needle': {
       id: '2ml-syringe-with-needle',
@@ -90,7 +90,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: "/assets/images/products/2ml-sterile-hypodermic-syringe-with-needle.png",
     },
     '3ml-syringe-with-needle': {
       id: '3ml-syringe-with-needle',
@@ -123,7 +123,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: "/assets/images/products/3ml-sterile-hypodermic-syringe-with-needle.png",
     },
     '5ml-syringe-with-needle': {
       id: '5ml-syringe-with-needle',
@@ -156,7 +156,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: "/assets/images/products/5ml-sterile-hypodermic-syringe-with-needle.png",
     },
     '10ml-syringe-with-needle': {
       id: '10ml-syringe-with-needle',
@@ -189,7 +189,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: "/assets/images/products/10ml-sterile-hypodermic-syringe-with-needle.png",
     },
     '20ml-syringe-with-needle': {
       id: '20ml-syringe-with-needle',
@@ -222,7 +222,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: "/assets/images/products/20ml-sterile-hypodermic-syringe-with-needle.png",
     },
     '50ml-syringe-with-needle': {
       id: '50ml-syringe-with-needle',
@@ -255,7 +255,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: "/assets/images/products/50ml-sterile-hypodermic-syringe-with-needle.png",
     },
 
     // ==================== Category 2: Sterile Hypodermic Syringes without Needle ====================
@@ -280,7 +280,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/1ml-sterile-hypodermic-syringe-without-needle-(Tuberculin).png',
     },
     '2ml-syringe-without-needle': {
       id: '2ml-syringe-without-needle',
@@ -302,7 +302,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/2ml-sterile-hypodermic-syringe-without-needle.png',
     },
     '3ml-syringe-without-needle': {
       id: '3ml-syringe-without-needle',
@@ -324,7 +324,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/3ml-sterile-hypodermic-syringe-without-needle.png',
     },
     '5ml-syringe-without-needle': {
       id: '5ml-syringe-without-needle',
@@ -346,7 +346,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/5ml-sterile-hypodermic-syringe-without-needle.png',
     },
     '10ml-syringe-without-needle': {
       id: '10ml-syringe-without-needle',
@@ -368,7 +368,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/10ml-sterile-hypodermic-syringe-without-needle.png',
     },
     '20ml-syringe-without-needle': {
       id: '20ml-syringe-without-needle',
@@ -390,7 +390,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/20ml-sterile-hypodermic-syringe-without-needle.png',
     },
     '50ml-syringe-without-needle': {
       id: '50ml-syringe-without-needle',
@@ -412,7 +412,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005', 'MDS 1010'],
       mdt: ['MDT 2002', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/50ml-sterile-hypodermic-syringe-without-needle.png',
     },
 
     // ==================== Category 3: Sterile Hypodermic Needles ====================
@@ -436,7 +436,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/16g-steriles-hypodermic-needle.png',
     },
     '18g-hypodermic-needle': {
       id: '18g-hypodermic-needle',
@@ -458,7 +458,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/18g-steriles-hypodermic-needle.png',
     },
     '20g-hypodermic-needle': {
       id: '20g-hypodermic-needle',
@@ -480,7 +480,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/20g-steriles-hypodermic-needle.png',
     },
     '21g-hypodermic-needle': {
       id: '21g-hypodermic-needle',
@@ -502,7 +502,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/21g-steriles-hypodermic-needle.png',
     },
     '22g-hypodermic-needle': {
       id: '22g-hypodermic-needle',
@@ -524,7 +524,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/22g-steriles-hypodermic-needle.png',
     },
     '23g-hypodermic-needle': {
       id: '23g-hypodermic-needle',
@@ -546,7 +546,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/23g-steriles-hypodermic-needle.png',
     },
     '24g-hypodermic-needle': {
       id: '24g-hypodermic-needle',
@@ -568,7 +568,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/24g-steriles-hypodermic-needle.png',
     },
     '25g-hypodermic-needle': {
       id: '25g-hypodermic-needle',
@@ -590,7 +590,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/25g-steriles-hypodermic-needle.png',
     },
     '26g-hypodermic-needle': {
       id: '26g-hypodermic-needle',
@@ -612,7 +612,7 @@ export const productsDatabase = {
       mdn: 'MDN 1202',
       mds: ['MDS 1005'],
       mdt: ['MDT 2001', 'MDT 2008', 'MDT 2011'],
-      image: null,
+      image: '/assets/images/products/26g-steriles-hypodermic-needle.png',
     },
   },
 };

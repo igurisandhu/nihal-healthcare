@@ -12,7 +12,7 @@ import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButto
 
 
 // SEO Metadata Injection
-import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
+import { injectMeta, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
 import { injectGTM } from './utils/gtm.js';
 
@@ -20,7 +20,7 @@ injectGTM();
 
 // Inject History page SEO metadata
 const historyMetadata = getPageMetadata('history')
-injectEnhancedMetaTags(historyMetadata)
+injectMeta(historyMetadata)
 injectMultipleSchemas([
   generateOrganizationSchema(),
   generateBreadcrumbSchema([

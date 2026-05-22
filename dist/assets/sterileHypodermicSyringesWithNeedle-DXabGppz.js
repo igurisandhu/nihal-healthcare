@@ -1,1 +1,0 @@
-import"./gtm-BSo7J3CR.js";import{t as e}from"./categoryPage-rxGobvrx.js";e(`sterile-hypodermic-syringes`);

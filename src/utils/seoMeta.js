@@ -148,6 +148,9 @@ export const generateMetaTags = (data, isVariant = false) => {
     ogDescription: description,
     ogImage,
     ogUrl: url,
+    ogType: isVariant ? 'product' : 'website',
+    ogLogo: 'https://nihalhealthcare.com/assets/images/nihal-healthcare-logo.png',
+    ogSiteName: 'Nihal Healthcare',
     twitterCard: 'summary_large_image',
     twitterTitle: title,
     twitterDescription: description,
@@ -187,56 +190,6 @@ export const injectFavicons = () => {
 /**
  * Inject meta tags into document head
  */
-export const injectMetaTags = (tags) => {
-  // Set page title
-  if (tags.title) {
-    document.title = tags.title;
-  }
-
-  // Remove existing meta tags (to avoid duplicates)
-  const existingMeta = document.querySelectorAll('meta[data-seo="true"]');
-  existingMeta.forEach((tag) => tag.remove());
-
-  // Helper function to add or update meta tag
-  const addOrUpdateMeta = (name, content, property = false) => {
-    const attr = property ? 'property' : 'name';
-    let meta = document.querySelector(`meta[${attr}="${name}"]`);
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attr, name);
-      meta.setAttribute('data-seo', 'true');
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', content);
-  };
-
-  // Add meta tags
-  addOrUpdateMeta('description', tags.description);
-  addOrUpdateMeta('keywords', tags.keywords);
-  addOrUpdateMeta('robots', tags.robots);
-  addOrUpdateMeta('og:title', tags.ogTitle, true);
-  addOrUpdateMeta('og:description', tags.ogDescription, true);
-  addOrUpdateMeta('og:image', tags.ogImage, true);
-  addOrUpdateMeta('og:url', tags.ogUrl, true);
-  addOrUpdateMeta('og:type', 'website', true);
-  addOrUpdateMeta('twitter:card', tags.twitterCard);
-  addOrUpdateMeta('twitter:title', tags.twitterTitle);
-  addOrUpdateMeta('twitter:description', tags.twitterDescription);
-  addOrUpdateMeta('twitter:image', tags.twitterImage);
-
-  // Add canonical tag
-  let canonical = document.querySelector('link[rel="canonical"]');
-  if (!canonical) {
-    canonical = document.createElement('link');
-    canonical.rel = 'canonical';
-    document.head.appendChild(canonical);
-  }
-  canonical.href = tags.canonical;
-
-  // Inject favicons
-  injectFavicons();
-};
-
 /**
  * Inject JSON-LD schema into document head
  */
@@ -572,38 +525,11 @@ export const generateHomePageSchema = (baseUrl = 'https://nihalhealthcare.com') 
 };
 
 /**
- * Generate comprehensive meta tags for any page type
+ * Inject meta tags into document head.
+ * The single entry point for all meta tag injection across all page types.
+ * Accepts the shape returned by getPageMetadata() or generateMetaTags().
  */
-export const generatePageMetaTags = (pageData) => {
-  const baseUrl = pageData.baseUrl || 'https://nihalhealthcare.com';
-  const ogType = pageData.ogType || 'website';
-  const ogLocale = pageData.ogLocale || 'en_US';
-  
-  return {
-    title: pageData.title,
-    description: pageData.description,
-    keywords: pageData.keywords,
-    ogTitle: pageData.ogTitle || pageData.title,
-    ogDescription: pageData.ogDescription || pageData.description,
-    ogImage: pageData.ogImage || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare.jpg`,
-    ogUrl: pageData.url || baseUrl,
-    ogType: ogType,
-    ogLocale: ogLocale,
-    twitterCard: pageData.twitterCard || 'summary_large_image',
-    twitterTitle: pageData.twitterTitle || pageData.title,
-    twitterDescription: pageData.twitterDescription || pageData.description,
-    twitterImage: pageData.twitterImage || pageData.ogImage || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare.jpg`,
-    canonical: pageData.canonical || pageData.url || baseUrl,
-    robots: pageData.robots || 'index, follow',
-    author: pageData.author,
-    viewport: 'width=device-width, initial-scale=1.0',
-  };
-};
-
-/**
- * Inject meta tags with additional OG:locale and article tags
- */
-export const injectEnhancedMetaTags = (tags) => {
+export const injectMeta = (tags) => {
   // Set page title
   if (tags.title) {
     document.title = tags.title;
@@ -615,6 +541,7 @@ export const injectEnhancedMetaTags = (tags) => {
 
   // Helper function to add or update meta tag
   const addOrUpdateMeta = (name, content, property = false) => {
+    if (!content) return;
     const attr = property ? 'property' : 'name';
     let meta = document.querySelector(`meta[${attr}="${name}"]`);
     if (!meta) {
@@ -629,23 +556,25 @@ export const injectEnhancedMetaTags = (tags) => {
   // Add standard meta tags
   addOrUpdateMeta('description', tags.description);
   addOrUpdateMeta('keywords', tags.keywords);
-  addOrUpdateMeta('robots', tags.robots);
+  addOrUpdateMeta('robots', tags.robots || 'index, follow');
   addOrUpdateMeta('author', tags.author);
-  addOrUpdateMeta('viewport', tags.viewport);
+  addOrUpdateMeta('viewport', tags.viewport || 'width=device-width, initial-scale=1.0');
 
-  // Add Open Graph tags
-  addOrUpdateMeta('og:title', tags.ogTitle, true);
-  addOrUpdateMeta('og:description', tags.ogDescription, true);
+  // Add Open Graph tags — fall back to base fields if og-specific ones are not set
+  addOrUpdateMeta('og:title', tags.ogTitle || tags.title, true);
+  addOrUpdateMeta('og:description', tags.ogDescription || tags.description, true);
   addOrUpdateMeta('og:image', tags.ogImage, true);
-  addOrUpdateMeta('og:url', tags.ogUrl, true);
-  addOrUpdateMeta('og:type', tags.ogType, true);
-  addOrUpdateMeta('og:locale', tags.ogLocale, true);
+  addOrUpdateMeta('og:url', tags.ogUrl || tags.canonical, true);
+  addOrUpdateMeta('og:type', tags.ogType || 'website', true);
+  addOrUpdateMeta('og:locale', tags.ogLocale || 'en_US', true);
+  addOrUpdateMeta('og:logo', tags.ogLogo || 'https://nihalhealthcare.com/assets/images/nihal-healthcare-logo.png', true);
+  addOrUpdateMeta('og:site_name', tags.ogSiteName || 'Nihal Healthcare', true);
 
-  // Add Twitter Card tags
-  addOrUpdateMeta('twitter:card', tags.twitterCard);
-  addOrUpdateMeta('twitter:title', tags.twitterTitle);
-  addOrUpdateMeta('twitter:description', tags.twitterDescription);
-  addOrUpdateMeta('twitter:image', tags.twitterImage);
+  // Add Twitter Card tags — fall back to OG / base fields
+  addOrUpdateMeta('twitter:card', tags.twitterCard || 'summary_large_image');
+  addOrUpdateMeta('twitter:title', tags.twitterTitle || tags.ogTitle || tags.title);
+  addOrUpdateMeta('twitter:description', tags.twitterDescription || tags.ogDescription || tags.description);
+  addOrUpdateMeta('twitter:image', tags.twitterImage || tags.ogImage);
 
   // Add canonical tag
   let canonical = document.querySelector('link[rel="canonical"]');

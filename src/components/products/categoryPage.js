@@ -2,46 +2,13 @@
  * CategoryPage Component
  * Displays all variants of a product category
  */
-import { injectMetaTags, injectSchema, generateMetaTags, generateCollectionSchema } from '../../utils/seoMeta.js';
+import { injectMeta, injectSchema, generateMetaTags, generateCollectionSchema } from '../../utils/seoMeta.js';
 import { WhatsAppQuoteButton } from './whatsappQuoteButton.js';
-
-// Product variant placeholder images
-const variantImages = {
-  'sterile-hypodermic-syringes': {
-    '1ml-syringe-with-needle': '/assets/images/products/1ml-sterile-hypodermic-syringe-with-needle.png',
-    '2ml-syringe-with-needle': '/assets/images/products/2ml-sterile-hypodermic-syringe-with-needle.png',
-    '3ml-syringe-with-needle': '/assets/images/products/3ml-sterile-hypodermic-syringe-with-needle.png',
-    '5ml-syringe-with-needle': '/assets/images/products/5ml-sterile-hypodermic-syringe-with-needle.png',
-    '10ml-syringe-with-needle': '/assets/images/products/10ml-sterile-hypodermic-syringe-with-needle.png',
-    '20ml-syringe-with-needle': '/assets/images/products/20ml-sterile-hypodermic-syringe-with-needle.png',
-    '50ml-syringe-with-needle': '/assets/images/products/50ml-sterile-hypodermic-syringe-with-needle.png',
-  },
-  'sterile-hypodermic-syringes-without-needle': {
-    '1ml-syringe-without-needle': '/assets/images/products/1ml-sterile-hypodermic-syringe-without-needle-(Tuberculin).png',
-    '2ml-syringe-without-needle': '/assets/images/products/2ml-sterile-hypodermic-syringe-without-needle.png',
-    '3ml-syringe-without-needle': '/assets/images/products/3ml-sterile-hypodermic-syringe-without-needle.png',
-    '5ml-syringe-without-needle': '/assets/images/products/5ml-sterile-hypodermic-syringe-without-needle.png',
-    '10ml-syringe-without-needle': '/assets/images/products/10ml-sterile-hypodermic-syringe-without-needle.png',
-    '20ml-syringe-without-needle': '/assets/images/products/20ml-sterile-hypodermic-syringe-without-needle.png',
-    '50ml-syringe-without-needle': '/assets/images/products/50ml-sterile-hypodermic-syringe-without-needle.png',
-  },
-  'sterile-hypodermic-needles': {
-    '16g-hypodermic-needle': '/assets/images/products/16g-steriles-hypodermic-needle.png',
-    '18g-hypodermic-needle': '/assets/images/products/18g-steriles-hypodermic-needle.png',
-    '20g-hypodermic-needle': '/assets/images/products/20g-steriles-hypodermic-needle.png',
-    '21g-hypodermic-needle': '/assets/images/products/21g-steriles-hypodermic-needle.png',
-    '22g-hypodermic-needle': '/assets/images/products/22g-steriles-hypodermic-needle.png',
-    '23g-hypodermic-needle': '/assets/images/products/23g-steriles-hypodermic-needle.png',
-    '24g-hypodermic-needle': '/assets/images/products/24g-steriles-hypodermic-needle.png',
-    '25g-hypodermic-needle': '/assets/images/products/25g-steriles-hypodermic-needle.png',
-    '26g-hypodermic-needle': '/assets/images/products/26g-steriles-hypodermic-needle.png',
-  },
-};
 
 export function CategoryPage(categoryData) {
   // Inject SEO metadata for category page
   const metaTags = generateMetaTags(categoryData, false);
-  injectMetaTags(metaTags);
+  injectMeta(metaTags);
 
   const schema = generateCollectionSchema(categoryData, categoryData.variants);
   injectSchema(schema);
@@ -55,7 +22,7 @@ export function CategoryPage(categoryData) {
           ? 'Single gauge'
           : 'Multiple sizes';
 
-      const imageUrl = variantImages[categoryData.id]?.[variant.slug] || 
+      const imageUrl = variant.image || 
                       'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=400&h=300&fit=crop';
 
       return `

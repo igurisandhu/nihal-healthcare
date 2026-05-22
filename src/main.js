@@ -31,7 +31,7 @@ import { faq } from './components/faq/faq'
 import { faqAnimation } from './components/faq/faqAnimation'
 
 // SEO Metadata Injection
-import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateHomePageSchema, generateFAQSchema, generateBreadcrumbSchema } from './utils/seoMeta'
+import { injectMeta, injectMultipleSchemas, generateOrganizationSchema, generateHomePageSchema, generateFAQSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
 import { faqData } from './data/faqData.js'
 import { injectGTM } from './utils/gtm.js';
@@ -40,7 +40,7 @@ injectGTM();
 
 // Inject homepage SEO metadata
 const homeMetadata = getPageMetadata('home')
-injectEnhancedMetaTags(homeMetadata)
+injectMeta(homeMetadata)
 
 // Inject schemas: Organization, WebSite, FAQPage, BreadcrumbList
 const schemas = [

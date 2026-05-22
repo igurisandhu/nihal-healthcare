@@ -10,7 +10,7 @@ import { footerAnimation } from './components/footer/footerAnimation.js';
 import { whatsappButton } from './components/whatsapp/whatsappButton';
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality.js';
 import { VariantDetailPage } from './components/products/variantDetailPage.js';
-import { injectMetaTags, injectSchema, generateMetaTags, generateProductSchema, addBreadcrumbsToProductDetail, injectMultipleSchemas } from './utils/seoMeta.js';
+import { injectMeta, injectSchema, generateMetaTags, generateProductSchema, addBreadcrumbsToProductDetail, injectMultipleSchemas } from './utils/seoMeta.js';
 
 injectGTM();
 
@@ -26,7 +26,7 @@ export async function initVariantDetailPage(variantSlug) {
 
   // Inject SEO metadata
   const metaTags = generateMetaTags(variantData, true);
-  injectMetaTags(metaTags);
+  injectMeta(metaTags);
 
   // Inject JSON-LD schemas (Product + BreadcrumbList)
   const productSchema = generateProductSchema(variantData);

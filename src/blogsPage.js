@@ -9,7 +9,7 @@ import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButto
 
 
 // SEO Metadata Injection
-import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
+import { injectMeta, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
 import { injectGTM } from './utils/gtm.js';
 
@@ -17,7 +17,7 @@ injectGTM();
 
 // Inject Blogs page SEO metadata
 const blogsMetadata = getPageMetadata('blogs')
-injectEnhancedMetaTags(blogsMetadata)
+injectMeta(blogsMetadata)
 injectMultipleSchemas([
   generateOrganizationSchema(),
   generateBreadcrumbSchema([

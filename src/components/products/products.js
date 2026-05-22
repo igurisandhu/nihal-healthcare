@@ -5,13 +5,6 @@
 import { productsDatabase } from '../../data/productsDatabase.js'
 import { productsHero } from './productsHero.js'
 
-// Product category placeholder images
-const categoryImages = {
-  'sterile-hypodermic-syringes': '/assets/images/products/sterile-hypodermic-syringes-with-needle.png',
-  'sterile-hypodermic-syringes-without-needle': '/assets/images/products/sterile-hypodermic-syringes-without-needle.png',
-  'sterile-hypodermic-needles': '/assets/images/products/sterile-hypodermic-needles.png',
-}
-
 export const products = () => {
   const { categories } = productsDatabase
 
@@ -44,7 +37,7 @@ export const products = () => {
               <!-- Image Container -->
               <div class="relative h-[240px] sm:h-[280px] overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
                 <img 
-                  src="${categoryImages[category.slug] || 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=600&h=400&fit=crop'}"
+                  src="${category.image || 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=600&h=400&fit=crop'}"
                   alt="${category.name}"
                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"

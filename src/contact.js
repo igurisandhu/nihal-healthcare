@@ -11,7 +11,7 @@ import { contactFormFunctionality } from './components/contact/contactFormFuncti
 
 
 // SEO Metadata Injection
-import { injectEnhancedMetaTags, injectMultipleSchemas, generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema } from './utils/seoMeta'
+import { injectMeta, injectMultipleSchemas, generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
 import { injectGTM } from './utils/gtm.js';
 
@@ -19,7 +19,7 @@ injectGTM();
 
 // Inject Contact page SEO metadata
 const contactMetadata = getPageMetadata('contact')
-injectEnhancedMetaTags(contactMetadata)
+injectMeta(contactMetadata)
 
 // Inject LocalBusiness, ContactPoint and Breadcrumb schemas
 const schemas = [

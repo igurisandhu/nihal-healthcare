@@ -105,6 +105,44 @@ export const pageMetadata = {
     ogImage: OG_IMAGE,
     canonical: `${BASE_URL}/insulin-syringes.html`,
   },
+
+  // Blog Pages
+  sterileManufacturing: {
+    title: 'The Importance Of Sterile Manufacturing In Healthcare | Nihal Healthcare',
+    description: 'Discover how sterile manufacturing standards ensure healthcare safety, reliability, and patient protection.',
+    keywords: 'sterile manufacturing, healthcare manufacturing, ISO 13485, ETO sterilization, medical device quality',
+    ogType: 'article',
+    ogImage: OG_IMAGE,
+    canonical: `${BASE_URL}/sterile-manufacturing.html`,
+    publishedDate: '2026-03-01',
+    modifiedDate: '2026-05-20',
+    articleCategory: 'Manufacturing',
+    articleKeywords: 'sterile manufacturing, healthcare manufacturing, ISO 13485, ETO sterilization',
+  },
+  healthcareInnovation: {
+    title: 'Healthcare Innovation Through Medical Engineering | Nihal Healthcare',
+    description: 'Learn how precision engineering improves healthcare manufacturing and medical product reliability.',
+    keywords: 'healthcare innovation, medical engineering, medical device manufacturing, precision engineering, ISO 13485',
+    ogType: 'article',
+    ogImage: OG_IMAGE,
+    canonical: `${BASE_URL}/healthcare-innovation.html`,
+    publishedDate: '2026-03-01',
+    modifiedDate: '2026-05-20',
+    articleCategory: 'Innovation',
+    articleKeywords: 'healthcare innovation, medical engineering, precision manufacturing',
+  },
+  medicalSafety: {
+    title: 'Why Medical Safety Standards Matter In Healthcare | Nihal Healthcare',
+    description: 'Explore the role of certified safety standards in modern healthcare manufacturing.',
+    keywords: 'medical safety standards, healthcare compliance, sterile medical devices, ISO 13485, patient safety',
+    ogType: 'article',
+    ogImage: OG_IMAGE,
+    canonical: `${BASE_URL}/medical-safety.html`,
+    publishedDate: '2026-03-01',
+    modifiedDate: '2026-05-20',
+    articleCategory: 'Safety',
+    articleKeywords: 'medical safety standards, healthcare compliance, patient safety',
+  },
 };
 
 /**
@@ -114,16 +152,30 @@ export const pageMetadata = {
  */
 export const getPageMetadata = (pageName) => {
   const metadata = pageMetadata[pageName] || pageMetadata.home;
-  
+
   return {
     baseUrl: BASE_URL,
     title: metadata.title,
     description: metadata.description,
     keywords: metadata.keywords,
+    ogTitle: metadata.title,
+    ogDescription: metadata.description,
     ogType: metadata.ogType || 'website',
     ogImage: metadata.ogImage || OG_IMAGE,
+    ogUrl: metadata.canonical || BASE_URL,
+    oglogo: `${BASE_URL}/assets/images/nihal-healthcare-logo.png`,
+    twitterCard: 'summary_large_image',
+    twitterTitle: metadata.title,
+    twitterDescription: metadata.description,
+    twitterImage: metadata.ogImage || OG_IMAGE,
     canonical: metadata.canonical || BASE_URL,
+    robots: 'index, follow',
     author: 'Nihal Healthcare',
+    // Article-specific fields (only present for blog pages)
+    ...(metadata.publishedDate && { publishedDate: metadata.publishedDate }),
+    ...(metadata.modifiedDate && { modifiedDate: metadata.modifiedDate }),
+    ...(metadata.articleCategory && { articleCategory: metadata.articleCategory }),
+    ...(metadata.articleKeywords && { articleKeywords: metadata.articleKeywords }),
   };
 };
 

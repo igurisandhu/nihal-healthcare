@@ -12,7 +12,7 @@ import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
 
 // SEO Metadata Injection
-import { injectEnhancedMetaTags, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
+import { injectMeta, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
 import { getPageMetadata } from './utils/pageMetadata'
 import { injectGTM } from './utils/gtm.js';
 
@@ -20,7 +20,7 @@ injectGTM();
 
 // Inject Leadership page SEO metadata
 const leadershipMetadata = getPageMetadata('leadership')
-injectEnhancedMetaTags(leadershipMetadata)
+injectMeta(leadershipMetadata)
 injectMultipleSchemas([
   generateOrganizationSchema(),
   generateBreadcrumbSchema([

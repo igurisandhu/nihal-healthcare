@@ -1,1 +1,0 @@
-import"./gtm-BSo7J3CR.js";import{t as e}from"./variantDetailPage-DlY1vpyc.js";e(`1ml-syringe-with-needle`);
