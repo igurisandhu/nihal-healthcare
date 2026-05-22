@@ -363,7 +363,7 @@ export const generateOrganizationSchema = (config = {}) => {
     '@type': 'Organization',
     name: 'Nihal Healthcare',
     url: baseUrl,
-    logo: `${baseUrl}/assets/logo.png`,
+    logo: `${baseUrl}/assets/nihal-healthcare-logo.png`,
     description: 'Leading manufacturer and supplier of sterile medical syringes and hypodermic needles. ISO 13485 certified. ETO sterilized medical devices.',
     foundingDate: '2007',
     foundingLocation: 'India',
@@ -426,7 +426,7 @@ export const generateLocalBusinessSchema = (config = {}) => {
     url: baseUrl,
     telephone: phone,
     email: email,
-    image: `${baseUrl}/assets/logo.png`,
+    image: `${baseUrl}/assets/nihal-healthcare-logo.png`,
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IN',
@@ -463,7 +463,7 @@ export const generateArticleSchema = (articleData, baseUrl = 'https://nihalhealt
       name: 'Nihal Healthcare',
       logo: {
         '@type': 'ImageObject',
-        url: `${baseUrl}/assets/logo.png`,
+        url: `${baseUrl}/assets/nihal-healthcare-logo.png`,
       },
     },
     mainEntityOfPage: {

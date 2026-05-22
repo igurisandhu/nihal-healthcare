@@ -1,4 +1,4 @@
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/nihal-healthcare-logo.png'
 
 export const footer = () => {
 
@@ -20,7 +20,7 @@ export const footer = () => {
           grid
           grid-cols-1
           sm:grid-cols-2
-          xl:grid-cols-4
+          lg:grid-cols-4
           gap-12
           pb-16
           border-b

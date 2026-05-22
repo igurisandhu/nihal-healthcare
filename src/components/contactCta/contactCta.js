@@ -14,7 +14,7 @@ export const contactCta = () => {
         </span>
 
         <!-- Main Heading -->
-        <h2 class="contact-cta-title mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+        <h2 class="contact-cta-title mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight">
 
           Looking For Trusted Healthcare Manufacturing Solutions?
 

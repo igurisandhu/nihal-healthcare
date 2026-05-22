@@ -118,13 +118,13 @@ export function CategoryPage(categoryData) {
   return `
     <div class="category-page">
       <!-- Hero Section -->
-      <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 text-white py-16 md:py-20 px-6 md:px-12 relative overflow-hidden">
+      <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 text-white py-16 md:py-20 px-4 md:px-6 lg:px-8 relative overflow-hidden">
         <!-- Decorative elements -->
         <div class="absolute top-0 right-0 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
 
         <div class="max-w-7xl mx-auto relative z-10">
-          <h1 class="text-4xl md:text-5xl font-extrabold mb-4">${categoryData.name}</h1>
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">${categoryData.name}</h1>
           <p class="text-lg text-cyan-100 mb-8 max-w-3xl">${categoryData.description}</p>
           <div class="flex flex-wrap items-center gap-3 text-sm">
             <span class="bg-white/20 backdrop-blur border border-white/30 px-4 py-2 rounded-full">
@@ -141,7 +141,7 @@ export function CategoryPage(categoryData) {
       </section>
 
       <!-- Variants Grid -->
-      <section class="py-16 md:py-24 px-6 md:px-12 bg-white">
+      <section class="py-16 md:py-24 px-4 md:px-6 lg:px-8 bg-white">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12">
             <h2 class="text-3xl font-bold text-slate-900 mb-2">Available Variants</h2>
@@ -157,7 +157,7 @@ export function CategoryPage(categoryData) {
       </section>
 
       <!-- CTA Section -->
-      <section class="bg-gradient-to-r from-blue-600 to-cyan-500 py-16 md:py-20 px-6 md:px-12">
+      <section class="bg-gradient-to-r from-blue-600 to-cyan-500 py-16 md:py-20 px-4 md:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center text-white">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">Need Custom Solutions?</h2>
           <p class="text-white/90 mb-8 text-lg">

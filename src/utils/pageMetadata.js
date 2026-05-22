@@ -143,13 +143,13 @@ export const contactInfo = {
 export const organizationInfo = {
   name: 'Nihal Healthcare',
   description: 'Leading manufacturer and supplier of sterile medical syringes and hypodermic needles.',
-  logo: `${BASE_URL}/assets/logo.png`,
+  logo: `${BASE_URL}/assets/nihal-healthcare-logo.png`,
   foundingDate: '2007',
   foundingLocation: 'India',
-  socials: {
-    facebook: 'https://www.facebook.com/nihalhealthcare',
-    linkedin: 'https://www.linkedin.com/company/nihal-healthcare',
-    youtube: 'https://www.youtube.com/@nihalhealthcare',
-    instagram: 'https://www.instagram.com/nihalhealthcare',
-  },
+  // socials: {
+  //   facebook: 'https://www.facebook.com/nihalhealthcare',
+  //   linkedin: 'https://www.linkedin.com/company/nihal-healthcare',
+  //   youtube: 'https://www.youtube.com/@nihalhealthcare',
+  //   instagram: 'https://www.instagram.com/nihalhealthcare',
+  // },
 };

@@ -5,8 +5,9 @@ export const aboutHero = () => {
   return `
 
     <section class="
-      py-20
-      md:py-28
+      py-14
+      md:py-20
+      lg:py-28
       bg-white
       overflow-hidden
     ">
@@ -22,7 +23,8 @@ export const aboutHero = () => {
         <div class="
           grid
           lg:grid-cols-2
-          gap-12
+          gap-8
+          sm:gap-12
           lg:gap-20
           items-center
         ">
@@ -45,9 +47,11 @@ export const aboutHero = () => {
 
             <h1 class="
               mt-5
-              text-4xl
-              md:text-5xl
-              lg:text-6xl
+              text-2xl
+              sm:text-3xl
+              md:text-4xl
+              lg:text-5xl
+              xl:text-6xl
               font-extrabold
               text-slate-900
               leading-tight

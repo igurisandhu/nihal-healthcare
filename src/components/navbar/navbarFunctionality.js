@@ -28,4 +28,11 @@ export const navbarFunctionality = () => {
 
   overlay.addEventListener("click", closeMenu)
 
+  // Close menu when window is resized to desktop width
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) {
+      closeMenu()
+    }
+  })
+
 }

@@ -33,11 +33,12 @@ export const certificationsGrid = (
             <div class="
               flex
               flex-col
-              lg:flex-row
-              lg:items-end
-              lg:justify-between
-              gap-8
-              mb-14
+              md:flex-row
+              md:items-end
+              md:justify-between
+              gap-6
+              mb-10
+              md:mb-14
             ">
 
               <!-- CONTENT -->
@@ -58,7 +59,9 @@ export const certificationsGrid = (
 
                 <h2 class="
                   mt-4
-                  text-4xl
+                  text-2xl
+                  sm:text-3xl
+                  md:text-4xl
                   font-bold
                   text-slate-900
                   leading-tight

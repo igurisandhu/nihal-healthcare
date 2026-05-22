@@ -19,7 +19,8 @@ export const feedbackStats = () => {
           grid
           grid-cols-2
           lg:grid-cols-4
-          gap-6
+          gap-4
+          sm:gap-6
         ">
 
           ${[
@@ -34,12 +35,15 @@ export const feedbackStats = () => {
               border
               border-slate-200
               rounded-[28px]
-              p-6
+              p-4
+              sm:p-6
               text-center
             ">
 
               <h3 class="
-                text-4xl
+                text-2xl
+                sm:text-3xl
+                md:text-4xl
                 font-extrabold
                 text-cyan-500
               ">

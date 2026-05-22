@@ -1,5 +1,5 @@
 
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/nihal-healthcare-logo.png'
 
 export const navbar = () => {
 
@@ -160,7 +160,7 @@ export const navbar = () => {
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="fixed top-0 right-[-100%] w-[85%] max-w-sm h-screen bg-white z-50 transition-all duration-500 shadow-2xl lg:hidden"
+        class="fixed top-0 right-[-100%] w-[85%] max-w-sm h-screen bg-white z-50 transition-all duration-500 shadow-2xl lg:hidden overflow-y-auto"
       >
 
         <div class="p-6 border-b border-slate-200 flex items-center justify-between">
@@ -210,20 +210,20 @@ export const navbar = () => {
               <ul class="flex flex-col gap-4 pl-4 border-l border-slate-200">
 
                 <li>
-                  <a href="/disposable-syringes.html" class="text-slate-600 hover:text-blue-600">
-                    Disposable Syringes
+                  <a href="/products/sterile-hypodermic-syringes.html" class="text-slate-600 hover:text-cyan-600">
+                    Sterile Hypodermic Syringes with Needle
                   </a>
                 </li>
 
                 <li>
-                  <a href="/insulin-syringes.html" class="text-slate-600 hover:text-blue-600">
-                    Insulin Syringe
+                  <a href="/products/sterile-hypodermic-syringes-without-needle.html" class="text-slate-600 hover:text-cyan-600">
+                    Sterile Hypodermic Syringes without Needle
                   </a>
                 </li>
 
                 <li>
-                  <a href="/safety-syringes.html" class="text-slate-600 hover:text-blue-600">
-                    Safety Syringes
+                  <a href="/products/sterile-hypodermic-needles.html" class="text-slate-600 hover:text-cyan-600">
+                    Sterile Hypodermic Needles
                   </a>
                 </li>
 
@@ -246,6 +246,18 @@ export const navbar = () => {
             <li>
               <a href="/blogs.html" class="text-lg font-semibold text-slate-800">
                 Blogs
+              </a>
+            </li>
+
+            <li>
+              <a href="/feedback.html" class="text-lg font-semibold text-slate-800">
+                Feedback
+              </a>
+            </li>
+
+            <li>
+              <a href="/leadership.html" class="text-lg font-semibold text-slate-800">
+                Leadership
               </a>
             </li>
 

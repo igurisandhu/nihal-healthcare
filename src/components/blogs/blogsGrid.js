@@ -32,11 +32,12 @@ export const blogsGrid = (
             <div class="
               flex
               flex-col
-              lg:flex-row
-              lg:items-end
-              lg:justify-between
-              gap-8
-              mb-14
+              md:flex-row
+              md:items-end
+              md:justify-between
+              gap-6
+              mb-10
+              md:mb-14
             ">
 
               <div>
@@ -56,8 +57,10 @@ export const blogsGrid = (
 
                 <h2 class="
                   mt-4
-                  text-4xl
-                  md:text-5xl
+                  text-2xl
+                  sm:text-3xl
+                  md:text-4xl
+                  lg:text-5xl
                   font-extrabold
                   text-slate-900
                   leading-tight

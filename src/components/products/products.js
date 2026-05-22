@@ -21,7 +21,7 @@ export const products = () => {
     <section class="products-section py-16 md:py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <!-- Section Header -->
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 md:mb-20">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
           <div>
             <span class="text-cyan-500 font-semibold uppercase tracking-widest text-xs sm:text-sm">
               Product Categories

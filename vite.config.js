@@ -35,21 +35,7 @@ export default defineConfig({
 
         leadership: resolve(__dirname, 'leadership.html'),
 
-        // PRODUCT PAGES
-        disposable: resolve(
-          __dirname,
-          'disposable-syringes.html'
-        ),
-
-        safety: resolve(
-          __dirname,
-          'safety-syringes.html'
-        ),
-
-        insulin: resolve(
-          __dirname,
-          'insulin-syringes.html'
-        ),
+        // PRODUCT PAGES (removed - these pages no longer exist)
 
         // BLOG PAGES
         sterileManufacturing: resolve(

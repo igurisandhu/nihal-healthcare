@@ -48,8 +48,9 @@ export const feedback = () => {
 
           <h2 class="
             mt-5
-            text-4xl
-            md:text-5xl
+            text-3xl
+            md:text-4xl
+            lg:text-5xl
             font-bold
             text-slate-900
             leading-tight

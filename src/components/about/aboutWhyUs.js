@@ -19,8 +19,9 @@ export const aboutWhyUs = () => {
   return `
 
     <section class="
-      py-20
-      md:py-28
+      py-14
+      md:py-20
+      lg:py-28
       bg-stone-50
     ">
 
@@ -52,7 +53,8 @@ export const aboutWhyUs = () => {
 
           <h2 class="
             mt-5
-            text-3xl
+            text-2xl
+            sm:text-3xl
             md:text-5xl
             font-extrabold
             text-slate-900
@@ -80,7 +82,8 @@ export const aboutWhyUs = () => {
               border
               border-slate-200
               rounded-[28px]
-              p-8
+              p-5
+              sm:p-8
             ">
 
               <div class="
@@ -104,7 +107,9 @@ export const aboutWhyUs = () => {
 
               <h3 class="
                 mt-6
-                text-2xl
+                text-lg
+                sm:text-xl
+                md:text-2xl
                 font-bold
                 text-slate-900
                 leading-snug

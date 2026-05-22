@@ -2,7 +2,7 @@ export const contactPage = () => {
 
   return `
 
-    <section class="contact-page pt-36 pb-20 md:pb-24 lg:pb-28 bg-stone-50 overflow-hidden">
+    <section class="contact-page pt-28 md:pt-36 pb-16 md:pb-24 lg:pb-28 bg-stone-50 overflow-hidden">
 
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
 
@@ -15,7 +15,7 @@ export const contactPage = () => {
 
           </span>
 
-          <h1 class="mt-4 text-4xl font-extrabold text-slate-900 leading-tight">
+          <h1 class="mt-4 text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
 
             Get In Touch With Nihal Healthcare
 
@@ -30,12 +30,12 @@ export const contactPage = () => {
         </div>
 
         <!-- Contact Section -->
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 mt-16">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-14 mt-10 md:mt-16">
 
           <!-- Office Details -->
-          <div class="bg-slate-900 rounded-[32px] p-8 md:p-10 text-white">
+          <div class="bg-slate-900 rounded-[32px] p-5 sm:p-8 md:p-10 text-white">
 
-            <h2 class="text-3xl font-bold">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold">
 
               Office Details
 
@@ -104,9 +104,9 @@ export const contactPage = () => {
           </div>
 
           <!-- Contact Form -->
-          <div class="bg-white rounded-[32px] border border-slate-200 p-8 md:p-10 shadow-sm">
+          <div class="bg-white rounded-[32px] border border-slate-200 p-5 sm:p-8 md:p-10 shadow-sm">
 
-            <h2 class="text-3xl font-bold text-slate-900">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
 
               Send A Message
 

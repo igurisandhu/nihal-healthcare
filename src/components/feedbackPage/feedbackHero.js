@@ -3,7 +3,8 @@ export const feedbackHero = () => {
   return `
 
     <section class="
-      pt-32
+      pt-24
+      md:pt-32
       pb-16
       bg-white
       overflow-hidden
@@ -32,7 +33,9 @@ export const feedbackHero = () => {
 
         <h1 class="
           mt-5
-          text-4xl
+          text-2xl
+          sm:text-3xl
+          md:text-4xl
           font-bold
           text-slate-900
           leading-tight

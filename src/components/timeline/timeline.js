@@ -24,7 +24,7 @@ export const timeline = () => {
           "></div>
 
           <!-- Timeline Items -->
-          <div class="space-y-16 md:space-y-28">
+          <div class="space-y-10 md:space-y-28">
 
             ${timelineData.map((item, index) => `
 
@@ -34,7 +34,7 @@ export const timeline = () => {
                   index % 2 === 0
                   ? `
                     <!-- LEFT CARD -->
-                    <div class="md:w-1/2 md:pr-16">
+                    <div class="w-full md:w-1/2 md:pr-16">
 
                       <div class="
                         group
@@ -42,7 +42,9 @@ export const timeline = () => {
                         border
                         border-slate-200
                         rounded-[28px]
-                        p-8 md:p-10
+                        p-5
+                        sm:p-8
+                        md:p-10
                         shadow-sm
                         hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)]
                         hover:border-cyan-300
@@ -72,7 +74,8 @@ export const timeline = () => {
                         <!-- Title -->
                         <h3 class="
                           mt-6
-                          text-2xl
+                          text-xl
+                          sm:text-2xl
                           md:text-3xl
                           font-bold
                           text-slate-900
@@ -102,7 +105,7 @@ export const timeline = () => {
                   `
                   : `
                     <!-- RIGHT CARD -->
-                    <div class="md:w-1/2 md:ml-auto md:pl-16">
+                    <div class="w-full md:w-1/2 md:ml-auto md:pl-16">
 
                       <div class="
                         group
@@ -110,7 +113,9 @@ export const timeline = () => {
                         border
                         border-slate-200
                         rounded-[28px]
-                        p-8 md:p-10
+                        p-5
+                        sm:p-8
+                        md:p-10
                         shadow-sm
                         hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)]
                         hover:border-cyan-300
@@ -140,7 +145,8 @@ export const timeline = () => {
                         <!-- Title -->
                         <h3 class="
                           mt-6
-                          text-2xl
+                          text-xl
+                          sm:text-2xl
                           md:text-3xl
                           font-bold
                           text-slate-900

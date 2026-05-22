@@ -3,8 +3,8 @@ export const aboutCTA = () => {
   return `
 
     <section class="
-      py-20
-      md:py-28
+      py-14
+      md:py-20
       bg-white
     ">
 
@@ -18,14 +18,17 @@ export const aboutCTA = () => {
 
         <div class="
           bg-slate-950
-          rounded-[40px]
-          p-10
+          rounded-[24px]
+          sm:rounded-[40px]
+          p-6
+          sm:p-10
           md:p-16
           text-center
         ">
 
           <h2 class="
-            text-3xl
+            text-2xl
+            sm:text-3xl
             md:text-5xl
             font-extrabold
             text-white

@@ -9,14 +9,14 @@ export const hero = () => {
 
   return `
 
-    <section class="hero-section relative overflow-hidden bg-stone-50 min-h-screen flex items-center pt-32 lg:pt-20">
+    <section class="hero-section relative overflow-hidden bg-stone-50 min-h-screen flex items-center pt-24 lg:pt-20">
 
       <!-- Background Glow -->
       <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-100 rounded-full blur-3xl opacity-40"></div>
 
       <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10 w-full">
 
-        <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
 
           <!-- Left Content -->
           <div class="text-center lg:text-left">
@@ -33,7 +33,7 @@ export const hero = () => {
             </div>
 
             <!-- Heading -->
-            <h1 class="hero-title text-3xl sm:text-5xl font-extrabold leading-[1.1] text-slate-900">
+            <h1 class="hero-title text-2xl sm:text-4xl md:text-5xl font-extrabold leading-[1.1] text-slate-900">
 
               Precision Engineered Syringe Solutions For Modern Healthcare
 

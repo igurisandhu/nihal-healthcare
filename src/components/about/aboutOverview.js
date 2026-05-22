@@ -3,8 +3,9 @@ export const aboutOverview = () => {
   return `
 
     <section class="
-      py-20
-      md:py-28
+      py-14
+      md:py-20
+      lg:py-28
       bg-stone-50
     ">
 
@@ -35,7 +36,8 @@ export const aboutOverview = () => {
 
           <h2 class="
             mt-5
-            text-3xl
+            text-2xl
+            sm:text-3xl
             md:text-5xl
             font-extrabold
             text-slate-900

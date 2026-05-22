@@ -89,7 +89,7 @@ export function VariantDetailPage(variant) {
   return `
     <div class="variant-detail-page">
       <!-- Breadcrumb -->
-      <nav class="bg-slate-50 border-b border-slate-200 px-6 py-4 md:px-12">
+      <nav class="bg-slate-50 border-b border-slate-200 px-4 py-4 md:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
           <ol class="flex gap-2 text-sm text-slate-600">
             <li><a href="/products.html" class="text-cyan-600 hover:text-cyan-700">Products</a></li>
@@ -102,7 +102,7 @@ export function VariantDetailPage(variant) {
       </nav>
 
       <!-- Hero Section -->
-      <section class="py-16 md:py-20 px-6 md:px-12 bg-white border-b border-slate-200">
+      <section class="py-16 md:py-20 px-4 md:px-6 lg:px-8 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <!-- Image -->
           <div class="flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 rounded-[24px] p-8 border border-slate-200">
@@ -120,7 +120,7 @@ export function VariantDetailPage(variant) {
               <span class="inline-block bg-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 ${variant.size || variant.gauge}
               </span>
-              <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">${variant.name}</h1>
+              <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">${variant.name}</h1>
             </div>
 
             <p class="text-lg text-slate-600 mb-8 leading-relaxed">${variant.fullDescription}</p>
@@ -148,7 +148,7 @@ export function VariantDetailPage(variant) {
       </section>
 
       <!-- Specifications Section -->
-      <section class="py-16 md:py-20 px-6 md:px-12 bg-slate-50 border-b border-slate-200">
+      <section class="py-16 md:py-20 px-4 md:px-6 lg:px-8 bg-slate-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-3xl font-bold text-slate-900 mb-12">Technical Specifications</h2>
           
@@ -172,7 +172,7 @@ export function VariantDetailPage(variant) {
       ${
         variant.needleGauges
           ? `
-        <section class="py-16 md:py-20 px-6 md:px-12 bg-white border-b border-slate-200">
+        <section class="py-16 md:py-20 px-4 md:px-6 lg:px-8 bg-white border-b border-slate-200">
           <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold text-slate-900 mb-4">Available Needle Gauges</h2>
             <p class="text-slate-600 mb-12">Hover over any gauge to request a quote for that specific variant:</p>
@@ -187,7 +187,7 @@ export function VariantDetailPage(variant) {
       }
 
       <!-- Intended Use Section -->
-      <section class="py-16 md:py-20 px-6 md:px-12 bg-gradient-to-br from-cyan-50 to-blue-50 border-b border-slate-200">
+      <section class="py-16 md:py-20 px-4 md:px-6 lg:px-8 bg-gradient-to-br from-cyan-50 to-blue-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-3xl font-bold text-slate-900 mb-6">Intended Use</h2>
           <p class="text-slate-700 leading-relaxed text-lg">
@@ -197,7 +197,7 @@ export function VariantDetailPage(variant) {
       </section>
 
       <!-- Regulatory Compliance Section -->
-      <section class="py-16 md:py-20 px-6 md:px-12 bg-white border-b border-slate-200">
+      <section class="py-16 md:py-20 px-4 md:px-6 lg:px-8 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-3xl font-bold text-slate-900 mb-12">Regulatory Compliance</h2>
           
@@ -242,7 +242,7 @@ export function VariantDetailPage(variant) {
       </section>
 
       <!-- Materials Section -->
-      <section class="py-16 md:py-20 px-6 md:px-12 bg-slate-50 border-b border-slate-200">
+      <section class="py-16 md:py-20 px-4 md:px-6 lg:px-8 bg-slate-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-3xl font-bold text-slate-900 mb-12">Materials Used</h2>
           
@@ -268,7 +268,7 @@ export function VariantDetailPage(variant) {
       </section>
 
       <!-- Final CTA Section -->
-      <section class="bg-gradient-to-r from-slate-900 to-cyan-900 text-white py-16 md:py-20 px-6 md:px-12 relative overflow-hidden">
+      <section class="bg-gradient-to-r from-slate-900 to-cyan-900 text-white py-16 md:py-20 px-4 md:px-6 lg:px-8 relative overflow-hidden">
         <!-- Decorative elements -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>

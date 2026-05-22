@@ -40,7 +40,7 @@ export const faq = () => {
     .join('')
 
   return `
-    <section class="faq-section py-20 bg-slate-50">
+    <section class="faq-section py-14 md:py-20 bg-slate-50">
 
       <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
 
@@ -49,7 +49,7 @@ export const faq = () => {
           <span class="inline-block text-cyan-500 font-semibold uppercase tracking-widest text-sm mb-3">
             Got Questions?
           </span>
-          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Frequently Asked Questions
           </h2>
           <p class="text-slate-500 text-lg max-w-2xl mx-auto">

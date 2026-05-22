@@ -18,7 +18,7 @@ export const productsHero = () => {
         </div>
 
         <!-- Title -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-slate-900 mb-6 md:mb-8">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.1] text-slate-900 mb-6 md:mb-8">
           Our Complete Medical Device Solutions
         </h1>
 

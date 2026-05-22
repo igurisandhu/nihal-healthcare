@@ -54,7 +54,8 @@ export const leadership = (
 
           <h2 class="
             mt-5
-            text-4xl
+            text-3xl
+            md:text-4xl
             font-bold
             text-slate-900
             leading-tight
@@ -72,7 +73,7 @@ export const leadership = (
 
           ${fullDetails
             ? 'space-y-10'
-            : 'grid md:grid-cols-2 xl:grid-cols-3 gap-12'
+            : 'grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 xl:gap-12'
           }
         ">
 
@@ -86,13 +87,15 @@ export const leadership = (
                 ? `
                   grid
                   lg:grid-cols-[260px_1fr]
-                  gap-10
+                  gap-8
+                  lg:gap-10
                   items-center
                   bg-white
                   border
                   border-slate-200
                   rounded-[32px]
-                  p-8
+                  p-5
+                  sm:p-8
                   lg:p-12
                   shadow-sm
                   text-left
@@ -134,8 +137,12 @@ export const leadership = (
                   src="${item.image}"
                   alt="${item.name}"
                   class="
-                    w-[220px]
-                    h-[220px]
+                    w-[160px]
+                    h-[160px]
+                    sm:w-[200px]
+                    sm:h-[200px]
+                    md:w-[220px]
+                    md:h-[220px]
                     rounded-full
                     object-cover
                     border-[6px]
@@ -150,8 +157,10 @@ export const leadership = (
               <div>
 
                 <h3 class="
-                  text-3xl
-                  md:text-4xl
+                  text-lg
+                  sm:text-xl
+                  md:text-2xl
+                  lg:text-3xl
                   font-bold
                   text-slate-900
                 ">

@@ -5,8 +5,9 @@ export const aboutPreview = () => {
   return `
 
     <section class="
-      py-20
-      md:py-28
+      py-14
+      md:py-20
+      lg:py-28
       bg-stone-50
       overflow-hidden
     ">
@@ -22,7 +23,8 @@ export const aboutPreview = () => {
         <div class="
           grid
           lg:grid-cols-2
-          gap-12
+          gap-6
+          sm:gap-10
           lg:gap-20
           items-center
         ">
@@ -70,8 +72,10 @@ export const aboutPreview = () => {
 
             <h2 class="
               mt-5
-              text-4xl
-              md:text-5xl
+              text-2xl
+              sm:text-3xl
+              md:text-4xl
+              lg:text-5xl
               font-extrabold
               text-slate-900
               leading-tight
