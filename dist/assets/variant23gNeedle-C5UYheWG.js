@@ -1,0 +1,1 @@
+import"./gtm-BuJCn9KU.js";import{t as e}from"./variantDetailPage-ZA2zvF_U.js";e(`23g-hypodermic-needle`);

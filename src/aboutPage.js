@@ -20,6 +20,7 @@ import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButto
 import { faq } from './components/faq/faq'
 import { faqAnimation } from './components/faq/faqAnimation'
 import { footerAnimation } from './components/footer/footerAnimation'
+import { navbarFunctionality } from './components/navbar/navbarFunctionality'
 
 // SEO Metadata Injection
 import { injectMeta, injectMultipleSchemas, generateOrganizationSchema, generateFAQSchema, generateBreadcrumbSchema } from './utils/seoMeta'
@@ -67,6 +68,7 @@ document.querySelector('#app').innerHTML = `
 
 `
 
+navbarFunctionality()
 aboutAnimation()
 whatsappButtonFunctionality()
 faqAnimation()

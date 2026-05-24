@@ -4,6 +4,7 @@ import { footer } from './components/footer/footer'
 import { footerAnimation } from './components/footer/footerAnimation'
 import { navbar } from './components/navbar/navbar'
 import './style.css'
+import { navbarFunctionality } from './components/navbar/navbarFunctionality'
 import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
 
@@ -44,5 +45,6 @@ document.querySelector('#app').innerHTML = `
 
 `
 
+navbarFunctionality()
 footerAnimation()
 whatsappButtonFunctionality()

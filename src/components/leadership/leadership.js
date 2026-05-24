@@ -65,6 +65,16 @@ export const leadership = (
 
           </h2>
 
+          <p class="
+            mt-6
+            text-slate-600
+            text-base
+            md:text-lg
+            leading-relaxed
+          ">
+            With the blessings of Sant Baba Nahar Singh Ji and Sant Baba Kapoor Singh Ji, Nihal Healthcare moves forward under visionary leadership dedicated to innovation, manufacturing excellence, and compassionate care for communities worldwide.
+          </p>
+
         </div>
 
         <!-- GRID -->

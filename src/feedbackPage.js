@@ -15,6 +15,7 @@ import { feedback } from './components/feedback/feedback'
 import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
 import { feedbackFunctionality } from './components/feedback/feedbackFunctionality.js'
+import { navbarFunctionality } from './components/navbar/navbarFunctionality'
 
 // SEO Metadata Injection
 import { injectMeta, injectMultipleSchemas, generateOrganizationSchema, generateBreadcrumbSchema } from './utils/seoMeta'
@@ -54,5 +55,6 @@ document.querySelector('#app').innerHTML = `
   ${footer()}
 
 `
+navbarFunctionality()
 whatsappButtonFunctionality()
 feedbackFunctionality()

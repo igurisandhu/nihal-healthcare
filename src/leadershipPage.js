@@ -8,6 +8,7 @@ import { footer } from './components/footer/footer'
 import { leadership } from './components/leadership/leadership'
 
 import { leadershipAnimation } from './components/leadership/leadershipAnimation'
+import { navbarFunctionality } from './components/navbar/navbarFunctionality'
 import { whatsappButton } from './components/whatsapp/whatsappButton'
 import { whatsappButtonFunctionality } from './components/whatsapp/whatsappButtonFunctionality'
 
@@ -44,5 +45,6 @@ document.querySelector('#app').innerHTML = `
 
 `
 
+navbarFunctionality()
 leadershipAnimation()
 whatsappButtonFunctionality()

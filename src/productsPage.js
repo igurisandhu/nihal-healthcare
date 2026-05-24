@@ -2,6 +2,7 @@ import { footer } from './components/footer/footer'
 import { footerAnimation } from './components/footer/footerAnimation'
 import { navbar } from './components/navbar/navbar'
 import { navbarAnimation } from './components/navbar/navbarAnimation'
+import { navbarFunctionality } from './components/navbar/navbarFunctionality'
 import { products } from './components/products/products'
 import { productsAnimation } from './components/products/productsAnimation'
 import './style.css'
@@ -212,6 +213,7 @@ document.querySelector('#app').innerHTML = `
 `
 
 navbarAnimation()
+navbarFunctionality()
 productsAnimation()
 footerAnimation()
 whatsappButtonFunctionality()
