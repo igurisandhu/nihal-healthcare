@@ -234,7 +234,7 @@ export function VariantDetailPage(variant) {
 
             <div class="bg-slate-50 p-6 rounded-[20px] border border-slate-200 hover:border-cyan-500 hover:shadow-lg transition">
               <p class="text-sm text-slate-500 mb-2 font-semibold uppercase tracking-wide">Certification</p>
-              <p class="text-2xl font-bold text-slate-900">ISO 13485</p>
+              <p class="text-2xl font-bold text-slate-900">CE Certified</p>
               <p class="text-xs text-slate-600 mt-3">Medical Device Quality Management</p>
             </div>
           </div>

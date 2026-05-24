@@ -24,7 +24,7 @@ export const productsHero = () => {
 
         <!-- Description -->
         <p class="text-lg md:text-xl text-slate-600 max-w-3xl leading-relaxed mb-8 md:mb-12">
-          Explore our comprehensive range of ISO 13485 certified sterile medical devices. From precision hypodermic syringes to specialized needles, every product is engineered for safety, accuracy, and reliability in clinical and laboratory environments.
+          Explore our comprehensive range of CE certified sterile medical devices. From precision hypodermic syringes to specialized needles, every product is engineered for safety, accuracy, and reliability in clinical and laboratory environments.
         </p>
 
         <!-- Stats -->

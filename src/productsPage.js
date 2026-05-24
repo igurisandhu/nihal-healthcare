@@ -32,7 +32,7 @@ injectMultipleSchemas([
     // ── Category pages ──────────────────────────────────────────────────────
     {
       name: 'Sterile Hypodermic Syringes with Needle',
-      description: 'ISO 13485 certified sterile disposable syringes with integrated needles in 1ml–50ml sizes. ETO sterilized.',
+      description: 'CE certified sterile disposable syringes with integrated needles in 1ml–50ml sizes. ETO sterilized.',
       url: '/products/sterile-hypodermic-syringes.html',
       image: 'https://nihalhealthcare.com/assets/images/products/sterile-hypodermic-syringes-with-needle.png',
     },

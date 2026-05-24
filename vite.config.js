@@ -77,7 +77,7 @@ function buildVariantMeta(variant) {
     : variant.gauge || 'multiple sizes'
   return {
     title: `${variant.name} | Medical Syringes & Needles | Nihal Healthcare`,
-    description: `${variant.briefDescription}. Available with ${gaugeInfo}. ISO 13485 certified. ETO sterilized. Contact for quote.`,
+    description: `${variant.briefDescription}. Available with ${gaugeInfo}. CE certified. ETO sterilized. Contact for quote.`,
     keywords: `${variant.name}, ${variant.categoryName}, ${variant.size || variant.gauge || ''}, sterile syringe, hypodermic needle, medical device, ISO 13485`,
     ogImage: variant.image ? `${BASE_URL}${variant.image}` : OG_IMAGE,
     canonical: `${BASE_URL}/products/${variant.categoryId}/${variant.slug}.html`,

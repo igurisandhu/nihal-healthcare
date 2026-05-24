@@ -66,7 +66,7 @@ export const products = () => {
 
                 <!-- Features -->
                 <div class="flex flex-wrap gap-2 mb-6">
-                  <span class="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-medium">ISO 13485</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-medium">CE Certified</span>
                   <span class="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-medium">ETO Sterilized</span>
                 </div>
 

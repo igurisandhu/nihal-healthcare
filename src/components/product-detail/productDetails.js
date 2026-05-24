@@ -77,7 +77,7 @@ export const productData = {
 
       {
         label: 'Certification',
-        value: 'ISO 13485'
+        value: 'CE Certified'
       },
 
       {
@@ -157,7 +157,7 @@ export const productData = {
 
       {
         label: 'Certification',
-        value: 'ISO 13485'
+        value: 'CE Certified'
       },
 
       {
@@ -236,7 +236,7 @@ export const productData = {
 
       {
         label: 'Certification',
-        value: 'ISO 13485'
+        value: 'CE Certified'
       },
 
       {

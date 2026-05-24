@@ -103,7 +103,7 @@ export function CategoryPage(categoryData) {
               ${categoryData.variants.length} Variants
             </span>
             <span class="bg-white/20 backdrop-blur border border-white/30 px-4 py-2 rounded-full">
-              ISO 13485 Certified
+              CE Certified
             </span>
             <span class="bg-white/20 backdrop-blur border border-white/30 px-4 py-2 rounded-full">
               ETO Sterilized

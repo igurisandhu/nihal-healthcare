@@ -120,7 +120,7 @@ export const generateMetaTags = (data, isVariant = false) => {
   if (isVariant) {
     // Variant detail page
     title = `${data.name} | Medical Syringes & Needles | Nihal Healthcare`;
-    description = `${data.briefDescription}. Available with ${data.needleGauges?.length || data.gauge ? 'multiple options' : 'various sizes'}. ISO 13485 certified. ETO sterilized. Contact for quote.`;
+    description = `${data.briefDescription}. Available with ${data.needleGauges?.length || data.gauge ? 'multiple options' : 'various sizes'}. CE certified. ETO sterilized. Contact for quote.`;
     keywords = `${data.name}, ${data.categoryName}, ${data.size || data.gauge}, sterile syringe, hypodermic needle, medical device, ISO 13485, ${data.emdnCode}`;
     ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare-logo.jpg';
     url = `${baseUrl}/products/${data.categoryId}/${data.slug}.html`;
@@ -310,7 +310,7 @@ export const generateOrganizationSchema = (config = {}) => {
     name: 'Nihal Healthcare',
     url: baseUrl,
     logo: `${baseUrl}/assets/nihal-healthcare-logo.png`,
-    description: 'Leading manufacturer and supplier of sterile medical syringes and hypodermic needles. ISO 13485 certified. ETO sterilized medical devices.',
+    description: 'Leading manufacturer and supplier of sterile medical syringes and hypodermic needles. CE certified. ETO sterilized medical devices.',
     foundingDate: '2007',
     foundingLocation: 'India',
     contactPoint: {
@@ -368,7 +368,7 @@ export const generateLocalBusinessSchema = (config = {}) => {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Nihal Healthcare',
-    description: 'Manufacturer and supplier of sterile medical devices - syringes and hypodermic needles. ISO 13485 certified.',
+    description: 'Manufacturer and supplier of sterile medical devices - syringes and hypodermic needles. CE certified.',
     url: baseUrl,
     telephone: phone,
     email: email,
@@ -506,7 +506,7 @@ export const generateHomePageSchema = (baseUrl = 'https://nihalhealthcare.com') 
     '@type': 'WebSite',
     name: 'Nihal Healthcare',
     url: baseUrl,
-    description: 'Leading manufacturer of sterile medical devices - syringes and hypodermic needles. ISO 13485 certified.',
+    description: 'Leading manufacturer of sterile medical devices - syringes and hypodermic needles. CE certified.',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -630,7 +630,7 @@ export const generateProductListSchema = (products, baseUrl = 'https://nihalheal
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Nihal Healthcare Medical Products',
-    description: 'Complete range of ISO 13485 certified sterile medical devices — syringes and hypodermic needles.',
+    description: 'Complete range of CE certified sterile medical devices — syringes and hypodermic needles.',
     numberOfItems: products.length,
     itemListElement: products.map((product, index) => ({
       '@type': 'ListItem',
