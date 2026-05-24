@@ -1,1 +1,0 @@
-import"./gtm-bDojpc5Z.js";import{t as e}from"./categoryPage-CWtLTifp.js";e(`sterile-hypodermic-needles`);

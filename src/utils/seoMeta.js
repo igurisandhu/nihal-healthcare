@@ -9,7 +9,7 @@
 export const generateProductSchema = (variant, baseUrl = 'https://nihalhealthcare.com') => {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'MedicalDevice',
     name: variant.name,
     description: variant.fullDescription,
     image: variant.image || 'https://nihalhealthcare.com/assets/placeholder-product.jpg',
@@ -23,13 +23,6 @@ export const generateProductSchema = (variant, baseUrl = 'https://nihalhealthcar
     brand: {
       '@type': 'Brand',
       name: 'Nihal Healthcare',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '150',
-      bestRating: '5',
-      worstRating: '1',
     },
     additionalProperty: [
       {
@@ -82,7 +75,7 @@ export const generateCollectionSchema = (category, variants, baseUrl = 'https://
     description: category.description,
     url: `${baseUrl}/products/${category.slug}.html`,
     mainEntity: {
-      '@type': 'Product',
+      '@type': 'ProductCollection',
       name: category.name,
       description: category.description,
       image: category.image || 'https://nihalhealthcare.com/assets/placeholder-category.jpg',
@@ -91,7 +84,6 @@ export const generateCollectionSchema = (category, variants, baseUrl = 'https://
         name: 'Nihal Healthcare',
         url: baseUrl,
       },
-      '@context': 'https://schema.org',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
@@ -101,7 +93,7 @@ export const generateCollectionSchema = (category, variants, baseUrl = 'https://
       },
     },
     hasPart: variants.map((variant) => ({
-      '@type': 'Product',
+      '@type': 'Thing',
       name: variant.name,
       description: variant.briefDescription,
       url: `${baseUrl}/products/${variant.categoryId}/${variant.slug}.html`,
@@ -636,7 +628,7 @@ export const generateProductListSchema = (products, baseUrl = 'https://nihalheal
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        '@type': 'Product',
+        '@type': 'Thing',
         name: product.name,
         description: product.description,
         url: product.url.startsWith('http') ? product.url : `${baseUrl}${product.url}`,
