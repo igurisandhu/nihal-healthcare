@@ -31,13 +31,6 @@ export const generateProductSchema = (variant, baseUrl = 'https://nihalhealthcar
       bestRating: '5',
       worstRating: '1',
     },
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'INR',
-      price: 'Contact for pricing',
-      availability: 'https://schema.org/InStock',
-      url: `${baseUrl}/products/${variant.categoryId}/${variant.slug}.html`,
-    },
     additionalProperty: [
       {
         '@type': 'PropertyValue',
@@ -650,12 +643,6 @@ export const generateProductListSchema = (products, baseUrl = 'https://nihalheal
         image: product.image || `${baseUrl}/assets/images/brand/og-image-nihal-healthcare-logo.jpg`,
         brand: { '@type': 'Brand', name: 'Nihal Healthcare' },
         manufacturer: { '@type': 'Organization', name: 'Nihal Healthcare', url: baseUrl },
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'INR',
-          availability: 'https://schema.org/InStock',
-          url: product.url.startsWith('http') ? product.url : `${baseUrl}${product.url}`,
-        },
       },
     })),
   };

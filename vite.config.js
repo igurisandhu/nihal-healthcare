@@ -49,6 +49,12 @@ function buildTagsHtml({ title, description, keywords, ogImage, canonical, ogTyp
     `  <meta name="twitter:description" content="${escapeHtml(description)}" />`,
     `  <meta name="twitter:image" content="${escapeHtml(img)}" />`,
     `  <link rel="canonical" href="${escapeHtml(url)}" />`,
+    `  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico" />`,
+    `  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />`,
+    `  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />`,
+    `  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />`,
+    `  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png" />`,
+    `  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png" />`,
   ].join('\n')
 }
 
