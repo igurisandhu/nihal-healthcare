@@ -1,1 +1,0 @@
-import"./gtm-Cxc6seEt.js";import{t as e}from"./variantDetailPage-CTKNS28G.js";e(`3ml-syringe-without-needle`);

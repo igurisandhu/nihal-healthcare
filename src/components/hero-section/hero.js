@@ -71,16 +71,14 @@ export const hero = () => {
           <div class="relative">
 
             <!-- Main Image -->
-            <div class="relative rounded-[30px] lg:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200">
-
-              <img
-                id="hero-image"
-                src="${hero1}"
-                alt="Healthcare"
-                class="w-full h-[350px] sm:h-[450px] object-cover duration-700"
-              />
-
-            </div>
+              <div class="relative rounded-[30px] lg:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200 bg-slate-100">
+                <img
+                  id="hero-image"
+                  src="${hero1}"
+                  alt="Healthcare"
+                  class="w-full h-[350px] sm:h-[450px] object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
 
           </div>
 
