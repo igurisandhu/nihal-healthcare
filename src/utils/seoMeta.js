@@ -113,14 +113,14 @@ export const generateMetaTags = (data, isVariant = false) => {
     // Variant detail page
     title = `${data.name} | Medical Syringes & Needles | Nihal Healthcare`;
     description = `${data.briefDescription}. Available with ${data.needleGauges?.length || data.gauge ? 'multiple options' : 'various sizes'}. CE certified. ETO sterilized. Contact for quote.`;
-    keywords = `${data.name}, ${data.categoryName}, ${data.size || data.gauge}, sterile syringe, hypodermic needle, medical device, ISO 13485, ${data.emdnCode}`;
+    keywords = `${data.name}, ${data.categoryName}, ${data.size || data.gauge}, sterile syringe, hypodermic needle, medical device, CE, ${data.emdnCode}`;
     ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare-logo.jpg';
     url = `${baseUrl}/products/${data.categoryId}/${data.slug}.html`;
   } else {
     // Category page
     title = `${data.name} | Nihal Healthcare - Medical Supplies`;
     description = data.description;
-    keywords = `${data.name}, sterile syringes, hypodermic needles, medical devices, ISO 13485, ETO sterilized, bulk ordering`;
+    keywords = `${data.name}, sterile syringes, hypodermic needles, medical devices, CE, ETO sterilized, bulk ordering`;
     ogImage = data.image || 'https://nihalhealthcare.com/assets/images/brand/og-image-nihal-healthcare-logo.jpg';
     url = `${baseUrl}/products/${data.slug}.html`;
   }

@@ -42,8 +42,8 @@ export const productsHero = () => {
             <p class="text-sm text-slate-600 mt-2">Sterile & Safe</p>
           </div>
           <div class="bg-white rounded-xl p-4 md:p-6 border border-slate-200">
-            <p class="text-2xl md:text-3xl font-bold text-slate-900">ISO</p>
-            <p class="text-sm text-slate-600 mt-2">13485 Certified</p>
+            <p class="text-2xl md:text-3xl font-bold text-slate-900">CE</p>
+            <p class="text-sm text-slate-600 mt-2">Certified</p>
           </div>
         </div>
       </div>

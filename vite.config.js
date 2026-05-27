@@ -63,7 +63,7 @@ function buildCategoryMeta(cat) {
   return {
     title: `${cat.name} | Nihal Healthcare - Medical Supplies`,
     description: cat.description,
-    keywords: `${cat.name}, sterile syringes, hypodermic needles, medical devices, ISO 13485, ETO sterilized, bulk ordering`,
+    keywords: `${cat.name}, sterile syringes, hypodermic needles, medical devices, CE, ETO sterilized, bulk ordering`,
     ogImage: cat.image ? `${BASE_URL}${cat.image}` : OG_IMAGE,
     canonical: `${BASE_URL}/products/${cat.slug}.html`,
     ogType: 'website',
@@ -78,7 +78,7 @@ function buildVariantMeta(variant) {
   return {
     title: `${variant.name} | Medical Syringes & Needles | Nihal Healthcare`,
     description: `${variant.briefDescription}. Available with ${gaugeInfo}. CE certified. ETO sterilized. Contact for quote.`,
-    keywords: `${variant.name}, ${variant.categoryName}, ${variant.size || variant.gauge || ''}, sterile syringe, hypodermic needle, medical device, ISO 13485`,
+    keywords: `${variant.name}, ${variant.categoryName}, ${variant.size || variant.gauge || ''}, sterile syringe, hypodermic needle, medical device, CE`,
     ogImage: variant.image ? `${BASE_URL}${variant.image}` : OG_IMAGE,
     canonical: `${BASE_URL}/products/${variant.categoryId}/${variant.slug}.html`,
     ogType: 'product',

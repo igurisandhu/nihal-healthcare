@@ -20,7 +20,7 @@ export const timelineData = [
 
   {
     year: "2011",
-    title: "EN ISO 13485 & CE Certified",
+    title: "EN CE & CE Certified",
     desc: "Received international certifications for healthcare manufacturing excellence.",
   },
 

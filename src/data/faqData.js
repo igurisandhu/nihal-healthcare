@@ -10,9 +10,9 @@ export const faqData = [
       'Nihal Healthcare manufactures a comprehensive range of sterile medical devices including Sterile Hypodermic Syringes (with and without needle) in sizes 1ml to 50ml, and Sterile Hypodermic Needles in gauges 16G to 26G. All products are ETO-sterilized and comply with international quality standards.',
   },
   {
-    question: 'Is Nihal Healthcare ISO 13485 certified?',
+    question: 'Is Nihal Healthcare CE certified?',
     answer:
-      'Yes. Nihal Healthcare is ISO 13485 certified, which is the internationally recognized standard for Quality Management Systems in medical device manufacturing. Our products also carry CE marking for European market compliance, ensuring the highest levels of safety and regulatory adherence.',
+      'Yes. Nihal Healthcare is CE certified, which is the internationally recognized standard for Quality Management Systems in medical device manufacturing. Our products also carry CE marking for European market compliance, ensuring the highest levels of safety and regulatory adherence.',
   },
   {
     question: 'What sterilization method does Nihal Healthcare use?',
@@ -27,12 +27,12 @@ export const faqData = [
   {
     question: 'What countries does Nihal Healthcare export to?',
     answer:
-      'Nihal Healthcare exports sterile medical devices to multiple international markets. Our products meet global regulatory standards including ISO 13485, CE marking, and comply with applicable country-specific medical device regulations, enabling us to serve healthcare providers across Asia, Africa, the Middle East, and Europe.',
+      'Nihal Healthcare exports sterile medical devices to multiple international markets. Our products meet global regulatory standards including CE, CE marking, and comply with applicable country-specific medical device regulations, enabling us to serve healthcare providers across Asia, Africa, the Middle East, and Europe.',
   },
   {
     question: 'How can I verify the quality and certifications of Nihal Healthcare products?',
     answer:
-      'All Nihal Healthcare products carry verifiable regulatory documentation. Our ISO 13485 certificate, CE marking, and product-specific compliance documentation are available upon request. Each product batch is tested and released under our Quality Management System. Visit our Certifications page for full details, or contact our team directly.',
+      'All Nihal Healthcare products carry verifiable regulatory documentation. Our CE certificate, CE marking, and product-specific compliance documentation are available upon request. Each product batch is tested and released under our Quality Management System. Visit our Certifications page for full details, or contact our team directly.',
   },
   {
     question: 'What sizes of syringes are available at Nihal Healthcare?',
