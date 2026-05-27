@@ -62,13 +62,13 @@ import{_ as e,c as t,d as n,g as r,h as i,i as a,s as o,t as s,v as c}from"./gtm
           <div class="relative">
 
             <!-- Main Image -->
-            <div class="relative rounded-[30px] lg:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200 bg-white">
+            <div class="relative rounded-[30px] lg:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200">
 
               <img
                 id="hero-image"
                 src="${j}"
                 alt="Healthcare"
-                class="w-full h-[350px] sm:h-[450px] object-cover transition-all duration-700"
+                class="w-full h-[350px] sm:h-[450px] object-cover duration-700"
               />
 
             </div>
