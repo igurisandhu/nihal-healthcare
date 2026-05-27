@@ -80,32 +80,6 @@ export const pageMetadata = {
     canonical: `${BASE_URL}/feedback.html`,
   },
   
-  // Product Categories
-  disposableSyringes: {
-    title: 'Disposable Syringes | Nihal Healthcare - Sterile Medical Syringes',
-    description: 'High-quality disposable sterile syringes available in multiple sizes (1ml-50ml). CE certified, ETO sterilized. Suitable for medical and laboratory use. Contact for bulk pricing.',
-    keywords: 'disposable syringes, sterile syringes, medical syringes, 1ml 3ml 5ml 10ml 20ml 50ml syringes, ISO certified',
-    ogType: 'website',
-    ogImage: OG_IMAGE,
-    canonical: `${BASE_URL}/disposable-syringes.html`,
-  },
-  safetySyringes: {
-    title: 'Safety Syringes | Nihal Healthcare - Needle Safety Syringes',
-    description: 'Advanced safety syringes with integrated needle protection mechanisms. CE certified. Reduces needlestick injuries. Available in multiple sizes. Contact for quotes.',
-    keywords: 'safety syringes, needle safety, safety-engineered devices, needlestick prevention, medical syringes, ISO certified',
-    ogType: 'website',
-    ogImage: OG_IMAGE,
-    canonical: `${BASE_URL}/safety-syringes.html`,
-  },
-  insulinSyringes: {
-    title: 'Insulin Syringes | Nihal Healthcare - Sterile Insulin Syringes',
-    description: 'Precision insulin syringes designed for accurate dosing. Available with fixed needles or needle-free options. CE certified, ETO sterilized. Bulk orders welcome.',
-    keywords: 'insulin syringes, diabetes syringes, pre-filled syringes, medical syringes, ISO certified, sterile syringes',
-    ogType: 'website',
-    ogImage: OG_IMAGE,
-    canonical: `${BASE_URL}/insulin-syringes.html`,
-  },
-
   // Blog Pages
   sterileManufacturing: {
     title: 'The Importance Of Sterile Manufacturing In Healthcare | Nihal Healthcare',

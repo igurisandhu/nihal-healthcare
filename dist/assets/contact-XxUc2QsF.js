@@ -1,4 +1,4 @@
-import{_ as e,g as t,h as n,i as r,l as i,o as a,t as o,v as s}from"./gtm-DKR_DvNW.js";import{t as c}from"./navbarAnimation-nIwfTKzd.js";import{n as l,r as u,t as d}from"./whatsappButtonFunctionality-Btj1hk3o.js";import{t as f}from"./footerAnimation-DKeORBd-.js";import{t as p}from"./pageMetadata-CkjekSx3.js";var m=()=>`
+import{_ as e,g as t,h as n,i as r,l as i,o as a,t as o,v as s}from"./gtm-DKR_DvNW.js";import{t as c}from"./navbarAnimation-nIwfTKzd.js";import{n as l,r as u,t as d}from"./whatsappButtonFunctionality-Btj1hk3o.js";import{t as f}from"./footerAnimation-DKeORBd-.js";import{t as p}from"./pageMetadata-BH_BEKXp.js";var m=()=>`
 
     <section class="contact-page pt-28 md:pt-36 pb-16 md:pb-24 lg:pb-28 bg-stone-50 overflow-hidden">
 
