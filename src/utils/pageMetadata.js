@@ -13,7 +13,7 @@ export const pageMetadata = {
     keywords: 'sterile syringes, hypodermic needles, medical devices, ISO 13485, ETO sterilization, bulk medical supplies, healthcare products',
     ogType: 'website',
     ogImage: OG_IMAGE,
-    canonical: BASE_URL,
+    canonical: `${BASE_URL}/`,
   },
   about: {
     title: 'About Us | Nihal Healthcare - Medical Device Manufacturer',
