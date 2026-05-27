@@ -70,14 +70,15 @@ export const hero = () => {
           <!-- Right Image -->
           <div class="relative">
 
-            <!-- Main Image -->
+            <!-- Image Carousel -->
               <div class="relative rounded-[30px] lg:rounded-[40px] overflow-hidden shadow-2xl border border-slate-200 bg-slate-100">
-                <img
-                  id="hero-image"
-                  src="${hero1}"
-                  alt="Healthcare"
-                  class="w-full h-[350px] sm:h-[450px] object-cover transition-transform duration-700 hover:scale-105"
-                />
+                <div class="flex w-[500%] animate-carousel-slide hover:[animation-play-state:paused]">
+                  <img src="${hero1}" alt="Healthcare" class="w-1/5 h-[350px] sm:h-[450px] object-cover transition-transform duration-700 hover:scale-105" />
+                  <img src="${hero2}" alt="Healthcare" class="w-1/5 h-[350px] sm:h-[450px] object-cover transition-transform duration-700 hover:scale-105" />
+                  <img src="${hero3}" alt="Healthcare" class="w-1/5 h-[350px] sm:h-[450px] object-cover transition-transform duration-700 hover:scale-105" />
+                  <img src="${hero4}" alt="Healthcare" class="w-1/5 h-[350px] sm:h-[450px] object-cover transition-transform duration-700 hover:scale-105" />
+                  <img src="${hero1}" alt="Healthcare" class="w-1/5 h-[350px] sm:h-[450px] object-cover transition-transform duration-700 hover:scale-105" />
+                </div>
               </div>
 
           </div>
